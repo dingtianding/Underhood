@@ -3,7 +3,7 @@ import React from 'react-redux';
 import NavBar from './nav_bar';
 import {connect} from 'react-redux';
 
-import { logout } from '../../actions/session_action';
+import { logout } from '../../actions/session';
 
 const mSTP = state => ({
     currentUser : state.session.currentUser,

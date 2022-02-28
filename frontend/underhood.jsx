@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { login } from './actions/session_action';
 import Root from './components/root';
 import createStore from './store/store'
 

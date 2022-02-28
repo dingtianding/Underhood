@@ -3,17 +3,17 @@ import WelcomeBar from './nav_bar/welcome_bar_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
-import StockIndexContainer from './stocks/stock_index_container';
+// import StockIndexContainer from './stocks/stock_index_container';
 import Home from './home/home';
 import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 export default () => (
   <div>
-    <AuthRoute path="/" component={NavBarContainer}/>
-    <AuthRoute exact path="/" component={Home} />
+    <Route exact path="/" component={NavBarContainer}/>
+    <Route exact path="/" component={Home} />
     <AuthRoute path="/signup" component={SignupContainer} />
     <AuthRoute path="/login" component={LoginContainer} />
-    <ProtectedRoute path="/stocks" component={StockIndexContainer} />
+    {/* <ProtectedRoute path="/stocks" component={StockIndexContainer} /> */}
   </div>
 );
