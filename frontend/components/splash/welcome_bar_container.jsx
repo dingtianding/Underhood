@@ -2,8 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import WelcomeBar from './welcome_bar';
 
-const mapStateToProps = (state) => ({
+const mSTP = (state) => ({
   user: state.session.currentUser
 });
 
-export default connect(mapStateToProps)(WelcomeBar);
+export default connect(mSTP)(WelcomeBar);
