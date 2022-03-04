@@ -14,7 +14,7 @@ const display = currentUser ? (
     </div>
   );
   return (
-    <header className="nav-bar">
+    <header className="splash-nav">
       <h1 className="logo">Underhood</h1>
       <div>
         {display}

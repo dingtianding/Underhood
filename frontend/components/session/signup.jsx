@@ -73,7 +73,7 @@ class Signup extends React.Component {
   render() {
     // console.log(this.props);
     return (
-      <div className="session-form">
+      <div className="signup-form">
         <h2>Enter your first and last name as they appear on your government ID.</h2>
         
         <form>
