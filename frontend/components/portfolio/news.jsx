@@ -7,7 +7,7 @@ function News (){
             <div className="newsfeed_container">
                 <div className="newsfeed_chartSection">
                 <div className="newsfeed_portfolio">
-                    <h1>Portfolio Value</h1>
+        
                     <h1>$114,656</h1>
                     <p>+ 44,63 (+0.04%) Today</p>
                     <div className="newsfeed_chart">
