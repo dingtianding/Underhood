@@ -1,6 +1,8 @@
 import React, { useState, useEffect} from 'react'
 import axios from "axios";
 import StatsRow from "./stats_row";
+import StockChart from '../../../app/assets/images/stock.svg'
+
 
 const key= "c8it1riad3ibm5ej5gu0"
 const BASE_URL = "https://finnhub.io/api/v1/quote?symbol=";
@@ -21,7 +23,7 @@ function Stats () {
 
     useEffect(() => {
         let testData = []
-        const stocksList = ["AAPL", "MSFT", "TSLA", "FB", "BABA", "UBER", "DIS", "SBUX"];
+        const stocksList = ["TSLA", "GME", "FB", "AAPL", "AMZN", "NFLX", "GOOG", "GOOGL", "BABA", "BILI", "NIO", "AMD", "ATVI", "MU", "XAR", "NIO", "JD", "IQ", "BIDU", "CENN", "USO", "RUN", "XOM", "ARKK", "NULL"];
     
         // getMyStocks();
         let promises = [];
@@ -52,6 +54,19 @@ function Stats () {
               <div className="stats__content">
               <div className="stats__rows">
 
+                      <div className="row">
+                        <div className="row_intro">
+                          <h1>Apple</h1>
+                          <p className="row_shares">8,666 Shares</p>
+                        </div>
+                        <div className="row_chart">
+                          <img src={StockChart} height={16}/>
+                        </div>
+                        <div className="row_numbers">
+                          <p className="row_price">150.3</p>
+                          <p className="row_percentage">-2.5%</p>
+                        </div>
+                      </div>
               </div>
         </div>
               <div className="stats_header">

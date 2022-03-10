@@ -55,12 +55,12 @@ function LineGraph({ casesType }) {
   useEffect(() => {
     
     let data = [];
-    let value = 50;
+    let value = 1000000;
     for(var i = 0; i < 366; i++){
       let date = new Date();
       date.setHours(0,0,0,0);
-      date.setDate(i);
-      value += Math.round((Math.random() < 0.5 ? 1 : 0) * Math.random() * 10);
+      date.setDate(i-355);
+      value += Math.round((Math.random() < 0.2 ? 1 : 0) * Math.random() * 10000);
       data.push({x: date, y: value});
     }   
     setData(data)

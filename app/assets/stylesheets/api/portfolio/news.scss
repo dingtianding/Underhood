@@ -1,0 +1,43 @@
+
+
+.news_list{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.news{
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px solid #3b4754;
+
+}
+.news_source{
+    font-weight: 500;
+    font-family: avenir;
+    font-size: 15px;
+
+}
+
+.news_published{
+    border: 1px solid yellow;
+    font-family: avenir;
+    margin-left: 10px;
+
+}
+
+.news_title{
+    font-size: 20px;
+    font-family: avenir;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.news_desc{
+
+    font-family: avenir;
+    color: #7B858A;
+    font-size: 15px;
+    margin-bottom: 10px;
+    
+}

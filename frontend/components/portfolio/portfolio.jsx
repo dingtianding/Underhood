@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './nav_bar_container'
-import News from './news'
+import Newsfeed from './newsfeed'
 import Stats from './stats'
 
 
@@ -38,7 +38,7 @@ class Portfolio extends React.Component{
                 </div>
                 <div className= "portfolio_body">
                     <div className="portfolio_container">
-                        <News/>
+                        <Newsfeed/>
                         <Stats/>
                     </div>
                 </div>

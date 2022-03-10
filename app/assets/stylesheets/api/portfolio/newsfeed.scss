@@ -4,15 +4,24 @@
     flex-direction: column;
     background-color: #000000;
   }
-  
-.newsfeed__container {
+
+.newsfeed_container {
     flex: 1;
     background-color: black;
-    font-size: 12px;
   }
 .newsfeed_portfolio {
     font-family: avenir;
-    
+}
+.port_value{
+    font-size: 32px;
+    font-weight: 500;
+    font-family: avenir;
+}
+.port_change{
+    color: yellowgreen;
+}
+.port_timeline{
+    color: #7B858A;
 }
 .newsfeed_chartSection{
     display: flex;
@@ -21,4 +30,89 @@
 .newsfeed_chart{
     width: 100%;
 }
+.newsfeed_buyingpower{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #3b4754;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px 0px 20px 0px;
+}
+.newsfeed_notices{
+    margin: 12px 0;
+    padding: 0;
+    margin-top: 60px;
+}
+.newsfeed_notices_box{
+    height: 120px;
+    padding: 20px;
+    border: 1px solid #31363A;
+    border-radius: 4px;
+    text-align: left;
+}
+.newsfeed_notices_box h1 {
+    font-size: 16px;
+    padding: 10px 0px 10px 0px
+
+}
+.newsfeed_notices_box p {
+    color: #7B858A;
+    font-size: 15px;
+    padding: 10px 0px 10px 0px;
+    font-weight: 600;
+}
+.newsfeed_notices_box button {
+    color: yellowgreen;
+    font-size: 12px;
+    margin-top: 15px;
+    background-color: black;
+    border: none;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 500px;
+}
+
+
+.newsfeed_trending {
+    height: fit-content;
+    padding-bottom: 20px;
+}
+  
+.newsfeed_trending_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px solid #3b4754;
+}
+.newsfeed_trending_box > h1 {
+    font-weight: 500;
+    font-size: 24px;
+}
+.newsfeed_trending_box > button {
+    color: yellowgreen;
+    font-size: 12px;
+    margin-top: 15px;
+    background-color: black;
+    border: none;
+    text-decoration: none;
+    font-weight: 500px;
+}
+
+
+.newsfeed_news {
+    height: fit-content;
+    padding-bottom: 20px;
+}
+.newsfeed_news_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px solid #3b4754;
+  }
+.newsfeed_news_box > h1 {
+    font-weight: 500;
+    font-size: 24px;
+  }
 
