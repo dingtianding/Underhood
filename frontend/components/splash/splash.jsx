@@ -24,6 +24,10 @@ export default () => (
           </div>
 
       </div>
+
+      <div>
+          <img src="https://github.com/dingtianding/Underhood/blob/main/app/assets/images/splashPhone.png?raw=true"></img>
+      </div>
   </div>
   
   <div className="second-splash-component">

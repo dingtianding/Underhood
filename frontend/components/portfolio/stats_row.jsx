@@ -10,7 +10,7 @@ function StatsRow(props) {
         <p className="row_shares">{props.shares && (props.shares = "shares")}</p>
       </div>
       <div className="row_chart">
-        <img src={StockChart} height={16}/>
+        <img src="https://raw.githubusercontent.com/dingtianding/Underhood/2835a8cebadffeff0d5614262e56b827367eab9e/app/assets/images/stock.svg" height={16}/>
       </div>
       <div className="row_numbers">
         <p className="row_price">{props.price}</p>

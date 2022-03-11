@@ -24,7 +24,7 @@ function Stats () {
 
     useEffect(() => {
         let testData = []
-        const stocksList = ["TSLA", "GME", "FB", "AAPL", "AMZN", "NFLX", "GOOG", "GOOGL", "BABA", "BILI", "NIO", "AMD", "ATVI", "MU", "XAR", "NIO", "JD", "IQ", "BIDU", "CENN", "USO", "RUN", "XOM", "ARKK", "NULL"];
+        const stocksList = ["TSLA", "GME", "FB", "AAPL", "AMZN", "NFLX", "GOOG", "GOOGL", "BABA", "BILI", "AMD", "ATVI", "MU", "XAR", "NIO", "JD", "IQ", "BIDU", "CENN", "USO", "RUN", "XOM", "ARKK", "NULL"];
     
         // getMyStocks();
         let promises = [];
