@@ -30,6 +30,7 @@ Underhood is a clone of a website version of a popular stock exchange app called
 ## Code snippets
 
 * ![sidebar](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+* ![graph](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/graph.png)
 ```javascript
 useEffect(() => {
     
@@ -71,7 +72,9 @@ useEffect(() => {
       )}
     </div>
   );
+  ```
 * ![news](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/news.png?raw=true)
+```javascript
 export const NewsContextProvider = (props) => {
   const [data, setData] = useState();
   const apiKey = "9803bf19a56d4f2784a06878e6855667";
@@ -91,7 +94,18 @@ export const NewsContextProvider = (props) => {
     </NewsContext.Provider>
   );
 };
-   
+
+function NewsArticle({ data }) {
+  return (
+    <div className="news">
+      <span className="news_source">{data.source.name}</span>
+      <span className="news_published">{data.publishedAt.substr(11,12)}</span>
+      <h1 className="news_title">{data.title}</h1>
+      <p className="news_desc">{data.description}</p>
+    </div>
+  );
+}
+ ```
 
 
 
