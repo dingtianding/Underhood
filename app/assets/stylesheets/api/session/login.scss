@@ -1,10 +1,10 @@
-.signin-page{
-    background-color: white;
+.login-page {
     display: flex;
     align-items: center;
-}
+    background-color: white;
+  }
 
-.login-form h1{
+.login-form h2{
     font-size: 1.3em;
     margin-bottom: 20px;
     font-weight: bold;
@@ -25,10 +25,17 @@
     margin-bottom: 15px;
 }
 
+.login-form label{
+   display: flex;
+   flex-direction: column ;
+
+}
+
 .login-form{
     font-family: avenir;
     margin-left: 5%;
     background-color: white;
+    width: 897px
 }
 
 .demo-button{
@@ -37,18 +44,19 @@
     color: black;
     font-style: bold;
     text-decoration: underline;
+    font-weight: 500
 }
 
 .signin-button-form{
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding: 10px 20px 10px 20px;
     background-color: rgb(29, 197, 29);
     border: 1px solid white;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .signin-button-form:hover{
     background-color: green;
 }
+
+

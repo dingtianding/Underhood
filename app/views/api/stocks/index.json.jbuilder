@@ -1,0 +1,1 @@
+json.extract! @user, :stock_history, :current_stocks

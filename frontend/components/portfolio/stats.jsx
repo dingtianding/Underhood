@@ -1,7 +1,8 @@
 import React, { useState, useEffect} from 'react'
 import axios from "axios";
 import StatsRow from "./stats_row";
-import StockChart from '../../../app/assets/images/stock.svg'
+import StockChart from '../../../app/assets/images/stock.svg';
+import { Link } from 'react-router-dom';
 
 
 const key= "c8it1riad3ibm5ej5gu0"
@@ -53,20 +54,21 @@ function Stats () {
               </div>
               <div className="stats__content">
               <div className="stats__rows">
-
+                    <Link to={`/stocks/AAPL`} key={"AAPL"} className='link-to-stock-show'>
                       <div className="row">
                         <div className="row_intro">
-                          <h1>Apple</h1>
+                          <h1>AAPL</h1>
                           <p className="row_shares">8,666 Shares</p>
                         </div>
                         <div className="row_chart">
                           <img src={StockChart} height={16}/>
                         </div>
                         <div className="row_numbers">
-                          <p className="row_price">150.3</p>
+                          <p className="row_price">158.3</p>
                           <p className="row_percentage">-2.5%</p>
                         </div>
                       </div>
+                    </Link>
               </div>
         </div>
               <div className="stats_header">

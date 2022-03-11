@@ -17,7 +17,7 @@ export default () => (
           </Link>
           <div>
                 <h2>
-                    <a href="https://google.com" target="_blank">
+                    <a href="https://github.com/dingtianding/Underhood" target="_blank">
                         Read me & Instructions
                     </a>
                 </h2>
@@ -29,13 +29,13 @@ export default () => (
   <div className="second-splash-component">
   <p>
       <span>
-  See this&nbsp;
-  <a href="https://google.com" target="_blank"><span className="tech-model">modal
+  See&nbsp;
+  <a href="https://github.com/dingtianding/Underhood/" target="_blank"><span className="tech-model">here
   </span> 
   </a>
-  &nbsp;to learn more about the technologies used.
+  &nbsp;to learn more about the technologies used in this clone.
   </span>
-  <button id="myBtn">Modal</button>
+  {/* <button id="myBtn">Modal</button> */}
   <div id="myModal" className="modal">
   <div className="modal-content">
     <span className="close">&times;</span>
@@ -51,7 +51,8 @@ export default () => (
          
       </div>
       <div>
-        <a target="_blank" href="https://github.com/dingtianding/Underhood"><h2>Github</h2></a>
+        <h1>About me</h1>
+        <a target="_blank" href="https://github.com/dingtianding/"><h2>Github</h2></a>
         <a target="_blank" href="https://www.linkedin.com/in/deanding/"><h2>LinkedIn</h2></a>
       </div>
   </div>

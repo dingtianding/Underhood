@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { NewsContext } from "./NewsContext";
-import NewsArticle from "./NewsArticle";
+import { NewsContext } from "./news_api";
+import NewsArticle from "./news_article";
 
 function News(props) {
   const { data } = useContext(NewsContext);

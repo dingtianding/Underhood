@@ -25,7 +25,7 @@
     align-items: center;
 }
 
-.nav_searchContainer{
+.nav_searchcontainer{
     height: 20px;
     width: 369px;
     border: 1px solid #31363B;
@@ -60,6 +60,7 @@
     align-items: center;
     margin-right: 48px;
     margin-left: 48px;
+    font-size: 15px;
 }
 
 .nav_btn button{
@@ -70,8 +71,23 @@
     margin-right: 20px;
     text-decoration: none;
     padding: 0 10px;
+    font-size: 15px;
+}
+.nav_btn a{
+    background-color: transparent;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: none;
+    margin-right: 20px;
+    text-decoration: none;
+    padding: 0 10px;
 }
 .nav_btn button:hover{
+    color:#5AC53B
+
+}
+.nav_btn a:hover{
     color:#5AC53B
 
 }

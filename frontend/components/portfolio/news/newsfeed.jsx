@@ -1,8 +1,8 @@
 import React from 'react'
-import LineGraph from './line_graph'
-import TimeLine from './timeline'
-import { NewsContextProvider } from "./news/NewsContext.jsx";
-import News from "./news/News";
+import LineGraph from '../line_graph'
+import TimeLine from '../timeline'
+import { NewsContextProvider } from "./news_api";
+import News from "./news_container";
 
 function Newsfeed (){
     return (

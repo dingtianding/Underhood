@@ -16,9 +16,21 @@
 
  @import './reset';
  @import './api/splash/splash.scss';
+ @import './api/splash/nav_bar.scss';
+ @import './api/splash/modal.scss';
+
  @import './api/session/login.scss';
+ @import './api/session/signup.scss';
+
  @import './api/portfolio/portfolio.scss';
  @import './api/portfolio/nav_bar.scss';
+ @import './api/portfolio/line_graph.scss';
+ @import './api/portfolio/news.scss';
+ @import './api/portfolio/stats.scss';
+ @import './api/portfolio/newsfeed.scss';
+
+
+
 
  
 

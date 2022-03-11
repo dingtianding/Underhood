@@ -1,12 +1,24 @@
 .signup-page{
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    overflow-y: hidden;
+    background-color: white;
+}
+.signup-form{
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 3%;
+    padding-top: 12%;
     margin-left: 10%;
     font-family: avenir;
+    background-color: white;
 }
-
+.signup-form h2{
+    font-weight: 400px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
 .signup-page img{
     margin-bottom: 10%;
 }
@@ -47,11 +59,13 @@
     font-family: avenir;
     margin-left: 5%;
     background-color: white;
+    ;
 }
 .name-form{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    flex-direction:column;
 }
 
 .name-form input{
@@ -90,19 +104,29 @@ ul li{
     float: right;
     padding-top: 10%;
     padding-left: 5%;
-    padding-right: 15%;
+    padding-right: 5%;
     font-family: avenir;
-    background-color: rgb(245, 245, 245);
-    width: 20%;
+    background-color: lightblue;
+
     height: 100%;
 }
 .signup-page-description h1{
-    font-size: 1em;
-    font-weight: bold;
+    font-size: 64px;
+    font-family: avenir;
     padding-bottom: 3%;
+    font-weight: 100px;
 }
 
 .signup-page-description p{
     padding-bottom: 15%;
-    line-height: 1.4em;
+    line-height: 18px;
+}
+
+.log-in{
+    display: flex;
+    flex-direction: column;
+    
+}
+.log-in a{
+margin-top: 10px;
 }

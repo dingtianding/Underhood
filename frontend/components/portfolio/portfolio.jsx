@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './nav_bar_container'
-import Newsfeed from './newsfeed'
+import Newsfeed from './news/newsfeed'
 import Stats from './stats'
 
 
