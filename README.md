@@ -28,7 +28,69 @@ Underhood is a clone of a website version of a popular stock exchange app called
    * Stock games with Leaderboard
 
 ## Code snippets
-* ![news](https://user-images.githubusercontent.com/82133627/152574195-76429be6-d24b-42f6-8a46-813d00c3faeb.gif)
+
+* ![sidebar](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+```javascript
+useEffect(() => {
+    
+    let data = [];
+    let value = 1000000;
+    for(var i = 0; i < 366; i++){
+      let date = new Date();
+      date.setHours(0,0,0,0);
+      date.setDate(i-355);
+      value += Math.round((Math.random() < 0.2 ? 1 : 0) * Math.random() * 10000);
+      data.push({x: date, y: value});
+    }   
+    setData(data)
+  }, []);
+
+  return (
+    <div className="linegraph">
+      {data?.length > 0 && (
+        <Line
+          data={{
+            datasets: [
+              {
+                type: 'line',
+                backgroundColor: "black",
+                borderColor: "#5AC53B",
+                borderWidth: 2,
+                pointBorderColor: 'rgba(0, 0, 0, 0)',
+                pointBackgroundColor: 'rgba(0, 0, 0, 0)',
+                pointHoverBackgroundColor: '#5AC53B',
+                pointHoverBorderColor: '#000000',
+                pointHoverBorderWidth: 4,
+                pointHoverRadius: 6,
+                data: data,
+              },
+            ],
+          }}
+          options={options}
+        />
+      )}
+    </div>
+  );
+* ![news](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/news.png?raw=true)
+export const NewsContextProvider = (props) => {
+  const [data, setData] = useState();
+  const apiKey = "9803bf19a56d4f2784a06878e6855667";
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`
+      )
+      .then((response) => setData(response.data))
+      .catch((error) => console.log(error));
+  }, []);
+
+  return (
+    <NewsContext.Provider value={{ data }}>
+      {props.children}
+    </NewsContext.Provider>
+  );
+};
    
 
 
