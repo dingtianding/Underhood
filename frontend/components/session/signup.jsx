@@ -71,7 +71,7 @@ class Signup extends React.Component {
     );
 }
   render() {
-    // console.log(this.props);
+
     return (
         <div className="signup-page">
             <div width="50%" className="signup-page-description">

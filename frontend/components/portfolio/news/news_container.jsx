@@ -4,7 +4,7 @@ import NewsArticle from "./news_article";
 
 function News(props) {
   const { data } = useContext(NewsContext);
-  console.log(data);
+
 
   return (
     <div>

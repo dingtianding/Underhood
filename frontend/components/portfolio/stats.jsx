@@ -41,7 +41,6 @@ function Stats () {
         });
         
         Promise.all(promises).then(()=>{
-          console.log(testData);
           setstockData(testData);
         })
       }, []);

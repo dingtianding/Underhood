@@ -28,7 +28,7 @@ class StockShowUserInfo extends React.Component {
 		let beginningUnitPrice = history[ticker][0].price;
 		let currentUnitPrice = history[ticker][108].price;
 		let currentShares = current_stocks[ticker];
-		// debugger
+	
 
 		Object.keys(stock_history).forEach(stock_info => {
 			let stock = stock_history[stock_info]
@@ -42,11 +42,11 @@ class StockShowUserInfo extends React.Component {
 		stockTodayReturn = `${((currentUnitPrice - beginningUnitPrice) / beginningUnitPrice * 100).toFixed(2)}%`
 
 		if (Object.keys(current_stocks).length > 0) {
-			// debugger
+
 			let portfolioValue = Object.keys(current_stocks)
 				.map(ticker => {
 					if (!history[ticker]) return 0
-					// debugger
+
 					return history[ticker][108].price * current_stocks[ticker]})
 				.reduce((acc, el) => acc + el)
 

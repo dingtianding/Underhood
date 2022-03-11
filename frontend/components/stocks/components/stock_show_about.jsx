@@ -38,7 +38,7 @@ class StockShowAbout extends React.Component {
 
 
   render() {
-    // debugger
+==
     let { ceo, employees, description, marketcap, hq_country, hq_state, industry, sector } = this.props.companyInfo
     ceo = ceo || 'N/A'
     employees = employees || 'N/A'

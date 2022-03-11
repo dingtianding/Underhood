@@ -209,7 +209,6 @@ class StockShowBar extends React.Component {
 
 		let moneyNeeded = (value==='Dollars') ? (amountToTrade) : (amountToTrade * stockUnitPrice)
 		let missingFunds = moneyNeeded - parseFloat(currentUser.balance)
-		debugger
 		this.props.addBalance(currentUser.id, missingFunds)
 		this.setState({errors: null})
 	}
@@ -238,7 +237,6 @@ class StockShowBar extends React.Component {
 	}
 
 	sellAllAction() {
-		// debugger
 		let { value, stockUnitPrice } = this.state;
 		let { current_stocks, ticker } = this.props;
 		let sharesAmount = current_stocks[ticker]
@@ -256,7 +254,6 @@ class StockShowBar extends React.Component {
 		let { ticker, current_stocks} = this.props
 		let stockAmountOwned = current_stocks[ticker]
 		if (!parseFloat(amountToTrade)) return
-		// debugger
 
 		let balance = parseFloat(this.props.currentUser.balance)
 		amountToTrade = parseFloat(amountToTrade)
@@ -276,7 +273,7 @@ class StockShowBar extends React.Component {
 				(amountToTrade / stockUnitPrice <= stockAmountOwned) ? this.setState({ errors: false }) : this.setState({ errors: true })
 			}
 		}
-		// debugger
+
 	}
 
 	buySellStock(shares) {
@@ -293,7 +290,7 @@ class StockShowBar extends React.Component {
 
 
 	render() {
-		// console.log(this.state.errors)
+
 		return (
 			<div id="stock-show-market-bar">
 				<div className='stock-show-market-bar-comp bottom-border bold-font'>{this.componentOne()}</div>

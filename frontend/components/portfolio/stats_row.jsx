@@ -2,14 +2,6 @@ import React from "react";
 import StockChart from '../../../app/assets/images/stock.svg'
 
 function StatsRow(props) {
-  //   console.log(props, "what is in props here?");
-// (currentPrice - openPrice)/openPrice
-//   const percentage = ((props.price - props.openPrice)/props.openPrice) * 100;
-
-//   const getModal = () => {
-
-//   }
-
     const percentage = (props.price-props.openPrice)/props.openPrice * 100.00
   return (
     <div className="row">
