@@ -60,7 +60,7 @@ function Stats () {
                           <p className="row_shares">8,666 Shares</p>
                         </div>
                         <div className="row_chart">
-                          <img src={StockChart} height={16}/>
+                          <img src="https://raw.githubusercontent.com/dingtianding/Underhood/2835a8cebadffeff0d5614262e56b827367eab9e/app/assets/images/stock.svg" height={16}/>
                         </div>
                         <div className="row_numbers">
                           <p className="row_price">158.3</p>
