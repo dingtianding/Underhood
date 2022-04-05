@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {logout} from '../../actions/session'
-import {getCurrentUser} from '../../actions/users'
+import {logout} from '../../../actions/session'
+import {getCurrentUser} from '../../../actions/users'
 import NavBar from './nav_bar'
 
 class NavBarContainer extends React.Component {

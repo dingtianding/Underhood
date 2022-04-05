@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import axios from "axios";
 import StatsRow from "./stats_row";
-import StockChart from '../../../app/assets/images/stock.svg';
+import StockChart from '../../../../app/assets/images/stock.svg';
 import { Link } from 'react-router-dom';
 
 

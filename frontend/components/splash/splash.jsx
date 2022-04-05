@@ -17,7 +17,7 @@ export default () => (
           </Link>
           <div>
                 <h2>
-                    <a href="https://github.com/dingtianding/Underhood" target="_blank">
+                    <a href="https://github.com/dingtianding/Underhood/blob/main/README.md" target="_blank">
                         Read me & Instructions
                     </a>
                 </h2>

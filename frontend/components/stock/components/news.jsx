@@ -96,7 +96,7 @@ class News extends React.Component {
 
 
   displayNewsArticle({ timestamp, source, summary, title, url, image }, idx) {
-=
+
     return (
       <a href={url} className='news bottom-border' key={idx}>
         <div className='news-left'>

@@ -95,17 +95,15 @@ class NavBar extends React.Component{
                     <Link to="/portfolio"><h1 id="nav_text">Underhood</h1></Link>
                 </div>
 
-                <div className='nav_search'>
-                    <div className='nav_searchcontainer'>
-                        <input id="search-bar" type="text" placeholder='Search' value={this.state.keyword} onChange={this.handleSearch} className='nav_searchinput' onFocus={this.toggleSearchResults} autoComplete="off"/>
-                    </div>
-                    <div className='nav_searchresults'>
-                    { this.renderSearchResults()}
-                    </div>
+                <div>
+                    {/* <StocksSearch
+                    handleFilterChange={handleFilterChange}
+                    filterStocks={filterStocks}
+                    stocks={stocks}
+                    /> */}
                 </div>
 
                 <div className={`nav_btn`}>
-                    {/* <button onClick={(e)=>this.handleClick(e)}>Reward</button> */}
                     
                     <a href="https://github.com/dingtianding">GitHub</a>
                     <a href="https://www.linkedin.com/in/deanding/">Linkedin</a>

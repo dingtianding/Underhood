@@ -1,7 +1,7 @@
 import React from 'react';
-import NavBar from './nav_bar_container'
-import Newsfeed from './news/newsfeed'
-import Stats from './stats'
+import NavBar from './navbar/nav_bar_container'
+import Newsfeed from './left/newsfeed'
+import Stats from './right/stats'
 
 
 class Portfolio extends React.Component{

@@ -1,10 +1,24 @@
-import React from 'react'
-import LineGraph from '../line_graph'
-import TimeLine from '../timeline'
-import { NewsContextProvider } from "./news_api";
-import News from "./news_container";
+import React, { useState, useEffect } from "react";
+import { fetchAllMarketNewsAPI } from "../../../utils/stock_api_util";
 
-function Newsfeed (){
+import LineGraph from './line_graph'
+import TimeLine from './timeline'
+import CompanyNews from "./company_news";
+
+
+function Newsfeed () {
+    const [companyNews, setCompanyNews] = useState([]);
+    const APIKey = "c8it1riad3ibm5ej5gu0";
+
+    useEffect(() => {
+        fetchAllMarketNewsAPI(APIKey).then((res) =>
+          setCompanyNews(res)
+        );
+        return () => {
+          setCompanyNews([]);
+        };
+      }, []);
+
     return (
         <div className="newsfeed">
             <div className="newsfeed_container">
@@ -42,11 +56,11 @@ function Newsfeed (){
                             </div>
                         </div>
 
-                        <div className="newsfeed_trending">
-                            <div className="newsfeed_trending_box">
+                        {/* <div className="newsfeed_learn">
+                            <div className="newsfeed_learn_box">
                                 <h1>Learn</h1>
                             </div>
-                        </div>
+                        </div> */}
                         
                         <div className="newsfeed_news">
                             <div className="newsfeed_news_box">
@@ -54,9 +68,7 @@ function Newsfeed (){
                                     
                             </div>
                             <div>
-                                <NewsContextProvider>
-                                        <News />
-                                </NewsContextProvider>
+                                <CompanyNews companyNews={companyNews} />
                             </div>
                         </div>
                         

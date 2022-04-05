@@ -1,5 +1,4 @@
 import React from "react";
-import StockChart from '../../../app/assets/images/stock.svg'
 
 function StatsRow(props) {
     const percentage = (props.price-props.openPrice)/props.openPrice * 100.00
