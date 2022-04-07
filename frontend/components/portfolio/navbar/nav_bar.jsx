@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import StocksContainer from "../stocks/stocks_container";
 
 
 
@@ -59,6 +58,25 @@ class NavBar extends React.Component{
             )
         }
       }
+      renderSearchResults() {
+        if (!this.state.results && !this.state.keyword) return '';
+        if (this.state.keyword && !this.state.results.length) return (
+            <div className='no-results'>We were unable to find any results for your search.</div>
+        )
+        const searchRow = this.state.results.map((result, idx) => {
+          const symbol = result["1. symbol"];
+          if (symbol.includes('.') || symbol.length >=5 ) return '';
+          return (
+            <Link to={`/assets/${symbol}`} key={idx} className='search-result'>
+              <div className='search-result-symbol'>{symbol}</div>
+              <div>{result["2. name"]}</div>
+            </Link>
+          )
+        })
+        return (
+          searchRow
+        );
+      }
 
     render() {
       if (!this.props) return null;
@@ -68,8 +86,16 @@ class NavBar extends React.Component{
                     <Link to="/portfolio"><h1 id="nav_text">Underhood</h1></Link>
                 </div>
 
-                <div>
-                <StocksContainer />
+                <div className='search-bar-div'>
+                  <div className='search-bar-flex'>
+              
+                    <div className='magnify-glass'><i className="fas fa-search"></i></div>
+                      <input type="text" placeholder='Search' value={this.state.keyword} onChange={this.handleSearch} id='search-bar' onFocus={this.toggleSearchResults} autoComplete="off"/>
+                  </div>
+
+                    <div className='search-results-div hidden'>
+                      { this.renderSearchResults()}
+                  </div>
                 </div>
 
                 <div className={`nav_btn`}>

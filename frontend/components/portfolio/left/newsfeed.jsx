@@ -56,11 +56,6 @@ function Newsfeed () {
                             </div>
                         </div>
 
-                        {/* <div className="newsfeed_learn">
-                            <div className="newsfeed_learn_box">
-                                <h1>Learn</h1>
-                            </div>
-                        </div> */}
                         
                         <div className="newsfeed_news">
                             <div className="newsfeed_news_box">

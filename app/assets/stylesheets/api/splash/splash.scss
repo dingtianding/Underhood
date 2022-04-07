@@ -1,3 +1,6 @@
+.splash{
+    height: 100%;
+}
 .splash-header{
     display: flex;
     flex-direction: row;
@@ -85,9 +88,6 @@ button:hover{
     background-color: black;
     border: none;
     margin-left: 0px;
-}
-.first-splash-component readme{
-
 }
 
 .first-splash-component button:hover{

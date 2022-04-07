@@ -1,44 +1,92 @@
 
 
-.news_list{
+// .news_list{
+//     display: flex;
+//     flex-direction: column;
+
+
+// }
+// .news{
+//     padding: 20px 0px 20px 0px;
+//     border-bottom: 1px solid #3b4754;
+
+// }
+// .news_source{
+//     font-weight: 500;
+//     font-family: avenir;
+//     font-size: 15px;
+
+// }
+
+// .news_published{
+//     // border: 1px solid yellow;
+//     font-family: avenir;
+//     margin-left: 10px;
+//     font-size: 12px;
+
+// }
+
+// .news_title{
+//     font-size: 20px;
+//     font-family: avenir;
+//     font-weight: 600;
+//     margin-top: 30px;
+//     margin-bottom: 20px;
+// }
+
+// .news_desc{
+
+//     font-family: avenir;
+//     color: #7B858A;
+//     font-size: 15px;
+//     margin-bottom: 10px;
+    
+// }
+
+  .news_box {
     display: flex;
     flex-direction: column;
+    padding-left: 24px;
+  }
+  .company-news-item-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    border-radius: 4px;
+    text-decoration: none;
 
+  }
+  .company-news-item-link:hover {
+    background-color: rgb(30,33,36);
 
-}
-.news{
-    padding: 20px 0px 20px 0px;
-    border-bottom: 1px solid #3b4754;
-
-}
-.news_source{
-    font-weight: 500;
-    font-family: avenir;
-    font-size: 15px;
-
-}
-
-.news_published{
-    // border: 1px solid yellow;
-    font-family: avenir;
-    margin-left: 10px;
-    font-size: 12px;
-
-}
-
-.news_title{
-    font-size: 20px;
-    font-family: avenir;
-    font-weight: 600;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-.news_desc{
-
-    font-family: avenir;
-    color: #7B858A;
-    font-size: 15px;
-    margin-bottom: 10px;
     
-}
+  }
+  .news_source {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 24px 0 6px 0;
+    color: white;
+    text-decoration: none;
+  }
+  .news_headline {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 6px;
+    color: white;
+    text-decoration: none;
+  }
+  .news_summary {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 6px;
+    color: gray
+  }
+  .news_img{
+    margin: 24px 0;
+    padding-right: 24px;
+  }
