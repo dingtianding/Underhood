@@ -1,5 +1,5 @@
 import React from "react";
-import StocksList from "../right/stocks_list";
+import StocksList from "./stocks_list";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 

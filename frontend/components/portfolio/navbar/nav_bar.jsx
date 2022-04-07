@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import StocksContainer from "../stocks/stocks_container";
+
 
 
 class NavBar extends React.Component{
@@ -14,16 +16,7 @@ class NavBar extends React.Component{
         this.handleWindowClick=this.handleWindowClick.bind(this)
         this.handleSearch = this.handleSearch.bind(this);
         this.debounceSearch = this.debounceSearch.bind(this)();
-      //   this.listener = (e) => {
-      //   const searchBar = document.getElementById('search-bar');
-      //   const results = document.querySelector('.nav_searchresults')
-      //   if (searchBar.contains(e.target)) {
-      //   $('.nav_searchresults').removeClass('hidden');
-      // } else {
-      //   $('.nav_searchresults').addClass('hidden');
-    //   // }
-    // }
-    // document.addEventListener('mouseup', this.listener);
+
     }
 
     handleClick(e){
@@ -66,26 +59,6 @@ class NavBar extends React.Component{
             )
         }
       }
-    
-      renderSearchResults() {
-        if (!this.state.results && !this.state.keyword) return '';
-        if (this.state.keyword && !this.state.results.length) return (
-            <div className='no-results'>We were unable to find any results for your search.</div>
-        )
-        const searchRow = this.state.results.map((result, idx) => {
-          const symbol = result["1. symbol"];
-          if (symbol.includes('.') || symbol.length >=5 ) return '';
-          return (
-            <Link to={`/assets/${symbol}`} key={idx} className='search-result'>
-              <div className='search-result-symbol'>{symbol}</div>
-              <div>{result["2. name"]}</div>
-            </Link>
-          )
-        })
-        return (
-          searchRow
-        );
-      }
 
     render() {
       if (!this.props) return null;
@@ -96,11 +69,7 @@ class NavBar extends React.Component{
                 </div>
 
                 <div>
-                    {/* <StocksSearch
-                    handleFilterChange={handleFilterChange}
-                    filterStocks={filterStocks}
-                    stocks={stocks}
-                    /> */}
+                <StocksContainer />
                 </div>
 
                 <div className={`nav_btn`}>
