@@ -12,15 +12,15 @@ import PortfolioContainer from './portfolio/portfolio_container';
 
 const App = () => (
   <div>
-          <Switch>
-          <AuthRoute path="/signup" component={SignupContainer} />
-          <AuthRoute path="/login" component={LoginContainer} />
-          <ProtectedRoute path="/portfolio" component={PortfolioContainer} />
-          {/* <ProtectedRoute path='/assets/:assetSymbol' component={AssetShowContainter} /> */}
-          <AuthRoute path="/" component={SplashBarContainer}/>
-          <AuthRoute path="/" component={Splash} />
-        </Switch>
+    <Route exact path="/" component={SplashBarContainer}/>
+    <Route exact path="/" component={Splash} />
 
+    <Switch>
+    <AuthRoute path="/signup" component={SignupContainer} />
+    <AuthRoute path="/login" component={LoginContainer} />
+    <ProtectedRoute path="/portfolio" component={PortfolioContainer} />
+    {/* <ProtectedRoute path='/assets/:assetSymbol' component={AssetShowContainter} /> */}
+    </Switch>
   </div>
 );
 export default withRouter(App);
