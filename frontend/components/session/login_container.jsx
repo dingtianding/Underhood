@@ -1,5 +1,5 @@
 import React from 'react';
-import {login, clearErrors} from '../../actions/session'
+import {login, clearErrors} from '../../actions/session_actions'
 import { connect } from 'react-redux'
 import Login from './login'
 

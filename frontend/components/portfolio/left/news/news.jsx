@@ -1,5 +1,5 @@
 import React from "react";
-import CompanyNewsItem from "./company_news_item";
+import CompanyNewsItem from "./news_item";
 
 const CompanyNews = ({ companyNews }) => {
   const news = Object.values(companyNews).map((article, i) => {

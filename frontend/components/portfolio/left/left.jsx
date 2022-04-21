@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { fetchAllMarketNews } from "../../../util/stock_api_util";
 
-import LineGraph from './line_graph'
-import TimeLine from './timeline'
-import CompanyNews from "./company_news";
+import LineGraph from './chart/line_graph'
+import TimeLine from './chart/timeline'
+import CompanyNews from "./news/news";
 
 
 function Newsfeed () {
@@ -49,12 +49,12 @@ function Newsfeed () {
                             </div>
                         </div>
 
-                        <div className="newsfeed_trending">
+                        {/* <div className="newsfeed_trending">
                             <div className="newsfeed_trending_box">
                                 <h1>Trending lists</h1>
                                 <button>Show More</button>
                             </div>
-                        </div>
+                        </div> */}
 
                         
                         <div className="newsfeed_news">

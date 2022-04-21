@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, Switch, Redirect,withRouter } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from '../util/route';
 
-import Splash from './splash_page/splash';
-import SplashBarContainer from './splash_page/splash_bar_container';
+import Splash from './splash/splash';
+import SplashBarContainer from './splash/splash_bar_container';
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import PortfolioContainer from './portfolio/portfolio_container';

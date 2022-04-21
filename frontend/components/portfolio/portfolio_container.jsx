@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {logout} from '../../actions/session'
-import {getCurrentUser} from '../../actions/users'
+import {getCurrentUser} from '../../actions/users_actions'
 import Portfolio from './portfolio'
 
 class PortfolioContainer extends React.Component {
@@ -31,7 +30,6 @@ const mSTP = state =>(
 
 const mDTP = dispatch =>(
     {
-        // logout: () => dispatch(logout()),
         getCurrentUser: userId => dispatch(getCurrentUser(userId))
     }
 )

@@ -1,4 +1,4 @@
-import * as SearchApiUtil from '../utils/search';
+import * as SearchApiUtil from '../util/search_api_util';
 
 export const RECEIVE_SEARCH = 'RECEIVE_SEARCH';
 
