@@ -13,8 +13,11 @@
           "id": <%= current_user.id %>,
           "email": "<%= current_user.email %>"
         }
-
       </script>
+        <script type="text/javascript">
+          window.alphaAPIKey = "<%= Rails.application.credentials.alpha[:api_key] %>"
+        </script>
+
     <% end %>
   </head>
 

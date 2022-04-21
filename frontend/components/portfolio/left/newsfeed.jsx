@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { fetchAllMarketNewsAPI } from "../../../utils/stock_api_util";
+import { fetchAllMarketNews } from "../../../util/stock_api_util";
 
 import LineGraph from './line_graph'
 import TimeLine from './timeline'
@@ -11,7 +11,7 @@ function Newsfeed () {
     const APIKey = "c8it1riad3ibm5ej5gu0";
 
     useEffect(() => {
-        fetchAllMarketNewsAPI(APIKey).then((res) =>
+        fetchAllMarketNews(APIKey).then((res) =>
           setCompanyNews(res)
         );
         return () => {
