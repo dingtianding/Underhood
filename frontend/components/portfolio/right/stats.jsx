@@ -53,7 +53,7 @@ function Stats () {
               </div>
               <div className="stats__content">
               <div className="stats__rows">
-                    <Link to={`/stocks/AAPL`} key={"AAPL"} className='link-to-stock-show'>
+                    <Link to={`/assets/AAPL`} key={"AAPL"} className='link-to-stock-show'>
                       <div className="row">
                         <div className="row_intro">
                           <h1>AAPL</h1>
@@ -63,8 +63,23 @@ function Stats () {
                           <img src="https://raw.githubusercontent.com/dingtianding/Underhood/2835a8cebadffeff0d5614262e56b827367eab9e/app/assets/images/stock.svg" height={16}/>
                         </div>
                         <div className="row_numbers">
-                          <p className="row_price">158.3</p>
-                          <p className="row_percentage">-2.5%</p>
+                          <p className="row_price">166.42</p>
+                          <p className="row_percentage">-1.47%</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to={`/assets/TSLA`} key={"TSLA"} className='link-to-stock-show'>
+                      <div className="row">
+                        <div className="row_intro">
+                          <h1>TSLA</h1>
+                          <p className="row_shares">100 Shares</p>
+                        </div>
+                        <div className="row_chart">
+                          <img src="https://raw.githubusercontent.com/dingtianding/Underhood/2835a8cebadffeff0d5614262e56b827367eab9e/app/assets/images/stock.svg" height={16}/>
+                        </div>
+                        <div className="row_numbers">
+                          <p className="row_price">1008.3</p>
+                          <p className="row_percentage">-6.14%</p>
                         </div>
                       </div>
                     </Link>

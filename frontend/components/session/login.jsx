@@ -69,13 +69,14 @@ class Login extends React.Component {
                   onChange={this.handleInput('password')}
                 />
                 </label>
-
-                <br />
-                  <button className="demo-button" onClick={this.demoLogin}>Demo Login</button>
-                <br />
                 {this.renderErrors()}
-                  <button className="signin-button-form" onClick={this.handleSubmit}>Log In</button>
-                  <p id="sign-up">Not on Underhood? <Link to="/signup">Create an account.</Link></p>
+                <br/>
+
+                <button className="signin-button-form" onClick={this.handleSubmit}>Log In</button>
+                <button className="demo-button" onClick={this.demoLogin}>Demo Login</button>
+                <br/>
+                <br/>
+                <p id="sign-up">Not on Underhood? <Link to="/signup">Create an account.</Link></p>
               </form>
           </div>
       </div>
