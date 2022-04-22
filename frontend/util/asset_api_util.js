@@ -32,23 +32,5 @@ export const fetchAssetFull = (symbol) => {
   })
 }
 
-export const fetchCryptoInterval = (symbol, interval = '5min') => {
-  return $.ajax({
-    method: 'GET',
-    url: `https://www.alphavantage.co/query?function=CRYPTO_INTRADAY&symbol=${symbol}&market=USD&interval=${interval}&apikey=${window.alphaAPIKey}`
-  })
-}
 
-export const fetchCryptoDaily = (symbol) => {
-  return $.ajax({
-    method: 'GET', 
-    url: `https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=${symbol}&market=USD&apikey=${window.alphaAPIKey}`
-  })
-}
-export const fetchCryptoFull = (symbol) => {
-  return $.ajax({
-    method: 'GET', 
-    url: `https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=${symbol}&market=USD&apikey=${window.alphaAPIKey}`
-  })
-}
 
