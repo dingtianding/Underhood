@@ -1,11 +1,11 @@
 export const fetchCompanyNews = (
-  stockSymbol,
+  assetSymbol,
   APIKey,
   fromDate,
   toDate
 ) =>
   $.ajax({
-    url: `https://finnhub.io/api/v1/company-news?symbol=${stockSymbol}&from=${fromDate}&to=${toDate}&token=${APIKey}`,
+    url: `https://finnhub.io/api/v1/company-news?symbol=${assetSymbol}&from=${fromDate}&to=${toDate}&token=${APIKey}`,
   });
 
 export const fetchAllMarketNews = (APIKey) =>

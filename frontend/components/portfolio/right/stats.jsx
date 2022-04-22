@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import axios from "axios";
-import StatsRow from "./stats_row";
+import StatsRow from "./list/stats_row";
 import StockChart from '../../../../app/assets/images/stock.svg';
 import { Link } from 'react-router-dom';
 
@@ -24,7 +24,7 @@ function Stats () {
 
     useEffect(() => {
         let testData = []
-        const stocksList = ["TSLA", "GME", "FB", "AAPL", "AMZN", "NFLX", "GOOG", "GOOGL", "BABA", "BILI", "AMD", "ATVI", "MU", "XAR", "NIO","ARKK", "JD", "IQ", "BIDU"];
+        const stocksList = ["TSLA", "GME", "FB", "AAPL", "AMZN", "NFLX", "GOOG", "GOOGL", "BABA", "BILI", "AMD", "ATVI", "MU", "XAR", "NIO","ARKK"];
     
         // getMyStocks();
         let promises = [];

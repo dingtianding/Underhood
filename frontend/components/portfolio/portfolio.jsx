@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from './navbar/navbar_container'
+import NavBar from '.././navbar/navbar_container'
 import Newsfeed from './left/left'
 import Stats from './right/stats'
 

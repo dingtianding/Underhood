@@ -12,8 +12,8 @@ import AssetShowContainter from './asset/asset_show_container';
 
 const App = () => (
   <div>
-    <Route exact path="/" component={SplashBarContainer}/>
-    <Route exact path="/" component={Splash} />
+    <AuthRoute exact path="/" component={SplashBarContainer}/>
+    <AuthRoute exact path="/" component={Splash} />
 
     <Switch>
     <AuthRoute path="/signup" component={SignupContainer} />

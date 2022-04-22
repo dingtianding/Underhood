@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
   // symbolDetails: state.entities.transactions.symbols,
   details: state.entities.assets.details,
   // errors: state.errors.transaction,
-  assetErrors: state.errors.asset
+  // assetErrors: state.errors.asset
 }
 }
 

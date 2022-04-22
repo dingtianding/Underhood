@@ -1,9 +1,6 @@
 import React from 'react';
 import AssetChart from './chart/asset_chart'
-import PortfolioHeaderContainer from '../portfolio/navbar/navbar_container';
-// import TransactionForm from './sidebar/transaction_form';
-// import LoadingSpinner from '../loading_spinner';
-// import WatchlistAssetModalContainer from '../watchlist/watchlist_asset_modal_container';
+import NavBarContainer from '../navbar/navbar_container';
 import { formatDollarString } from '../../util/format_util';
 
 export default class AssetShow extends React.Component {
@@ -16,8 +13,9 @@ export default class AssetShow extends React.Component {
   }
 
   componentDidMount() {
-    document.title = `${this.props.match.params.assetSymbol} | Sparrowhood`;
-      this.props.fetchTransactions(this.props.user.id)
+    document.title = `${this.props.match.params.assetSymbol} | Underhood`;
+      // this.props.fetchTransactions(this.props.user.id)
+      this.props.fetchAssetInterval(this.props.match.params.assetSymbol)
         .then(() => {
           Promise.all([
             this.props.fetchAssetInterval(this.props.match.params.assetSymbol),
@@ -38,42 +36,43 @@ export default class AssetShow extends React.Component {
     return `${sign}${formatDollarString(num)}`
   }
 
-  renderAssetDetails(symbolDetails, quantityOwned, currentPrice, initialPrice) {
-    if (!symbolDetails) return '';
-    const marketValue = `$${(currentPrice * quantityOwned).toFixed(2)}`;
-    const todayReturn = ((currentPrice - initialPrice) * quantityOwned);
-    const averageCost = parseFloat(symbolDetails.averagePrice);
-    const totalReturn = ((currentPrice - averageCost) * quantityOwned);
+  // renderAssetDetails(symbolDetails, quantityOwned, currentPrice, initialPrice) {
+  //   if (!symbolDetails) return '';
+  //   const marketValue = `$${(currentPrice * quantityOwned).toFixed(2)}`;
+  //   const todayReturn = ((currentPrice - initialPrice) * quantityOwned);
+  //   const averageCost = parseFloat(symbolDetails.averagePrice);
+  //   const totalReturn = ((currentPrice - averageCost) * quantityOwned);
 
-    const allSharesArr = Object.values(this.props.symbolDetails).map(value => parseFloat(value.quantity));
-    const allShares = allSharesArr.reduce((num, total) => (num + total));
-    const diversity = ((quantityOwned / allShares) * 100).toFixed(2);
-    return (
-      <div className='assetDetailsDiv' >
-        <div className='assetDetails'>
-          <p>Your market value</p>
-          <p className='value-subtitle'>{marketValue}</p>
-          <div className='asset-detail-row border-bottom'><span >Today's return</span><span>{this.formatDollarStringSign(todayReturn)}</span></div>
-          <div className='asset-detail-row'><span>Total return</span><span>{this.formatDollarStringSign(totalReturn)}</span></div>
+  //   const allSharesArr = Object.values(this.props.symbolDetails).map(value => parseFloat(value.quantity));
+  //   const allShares = allSharesArr.reduce((num, total) => (num + total));
+  //   const diversity = ((quantityOwned / allShares) * 100).toFixed(2);
+  //   return (
+  //     <div className='assetDetailsDiv' >
+  //       <div className='assetDetails'>
+  //         <p>Your market value</p>
+  //         <p className='value-subtitle'>{marketValue}</p>
+  //         <div className='asset-detail-row border-bottom'><span >Today's return</span><span>{this.formatDollarStringSign(todayReturn)}</span></div>
+  //         <div className='asset-detail-row'><span>Total return</span><span>{this.formatDollarStringSign(totalReturn)}</span></div>
 
-        </div>
-        <div className='assetDetails'>
-          <p>Your average cost</p>
-          <p className='value-subtitle'>{`$${averageCost.toFixed(2)}`}</p>
-          <div className='asset-detail-row border-bottom'><span>Shares</span><span>{quantityOwned}</span></div>
-          <div className='asset-detail-row'><span>Portfolio diversity</span><span>{`${diversity}%`}</span></div>
-        </div>
-      </div>
-    )
-  }
+  //       </div>
+  //       <div className='assetDetails'>
+  //         <p>Your average cost</p>
+  //         <p className='value-subtitle'>{`$${averageCost.toFixed(2)}`}</p>
+  //         <div className='asset-detail-row border-bottom'><span>Shares</span><span>{quantityOwned}</span></div>
+  //         <div className='asset-detail-row'><span>Portfolio diversity</span><span>{`${diversity}%`}</span></div>
+  //       </div>
+  //     </div>
+  //   )
+  // }
 
   render() {
-    if (this.state.loading || !this.props.details || !this.props.assets['interval'] || !this.props.details[this.state.symbol] || !this.props.assets['interval'][this.state.symbol]) return <LoadingSpinner/>
+    // if (this.state.loading || !this.props.details || !this.props.assets['interval'] || !this.props.details[this.state.symbol] || !this.props.assets['interval'][this.state.symbol]) return <LoadingSpinner/>
     // if (this.props.assetErrors.length) return <LoadingSpinner errors={this.props.assetErrors} clearErrors={this.props.clearErrors} history={this.props.history}/>
 
-    const symbolDetails = this.props.symbolDetails[this.props.match.params.assetSymbol];
-    const quantityOwned = symbolDetails ? parseFloat(symbolDetails['quantity']) : 0;
-    const details = this.props.details[this.state.symbol] || {};
+    // const symbolDetails = this.props.symbolDetails[this.props.match.params.assetSymbol];
+    // const quantityOwned = symbolDetails ? parseFloat(symbolDetails['quantity']) : 0;
+    // const details = this.props.details[this.state.symbol] || {};
+    debugger
     const assetValues = Object.values(this.props.assets['interval'][this.state.symbol]);
     const currentPrice = parseFloat(assetValues[0]["4. close"]);
     const initialPrice = parseFloat(assetValues[assetValues.length - 1]["4. close"]);
@@ -83,8 +82,8 @@ export default class AssetShow extends React.Component {
     return (
 
       <div className='asset-show'>
-        <WatchlistAssetModalContainer symbol={this.state.symbol} sign={sign}/>
-        <PortfolioHeaderContainer />
+        {/* <WatchlistAssetModalContainer symbol={this.state.symbol} sign={sign}/> */}
+        <NavBarContainer />
 
         <div className='asset-show-body'>
           <div className='main-asset-chart'>

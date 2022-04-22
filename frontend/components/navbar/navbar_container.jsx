@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { logout } from '../../../actions/session_actions'
-import { fetchSearch } from '../../../actions/search_actions'
-import PortfolioHeader from './navbar';
+import { logout } from '../../actions/session_actions'
+import { fetchSearch } from '../../actions/search_actions'
+import NavBar from './navbar';
 
 const mapStateToProps = (state) => ({
   user: state.entities.users[state.session.id],
@@ -14,4 +14,4 @@ const mapDispatchToProps = dispatch => ({
   fetchSearch: (keyword) => dispatch(fetchSearch(keyword))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(PortfolioHeader);
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
