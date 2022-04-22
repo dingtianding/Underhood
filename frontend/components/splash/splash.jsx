@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SplashBarContainer from './splash_bar_container';
+
 
 export default () => (
+    
+    
   <div className="splash" >
+      <div className="splash-bar" >
+        <SplashBarContainer/>
+      </div>
   <div className="first-splash-component">
       <div className="splash-app-description">
           <div>

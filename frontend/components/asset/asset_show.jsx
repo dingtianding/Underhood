@@ -66,13 +66,14 @@ export default class AssetShow extends React.Component {
   // }
 
   render() {
+    
     // if (this.state.loading || !this.props.details || !this.props.assets['interval'] || !this.props.details[this.state.symbol] || !this.props.assets['interval'][this.state.symbol]) return <LoadingSpinner/>
     // if (this.props.assetErrors.length) return <LoadingSpinner errors={this.props.assetErrors} clearErrors={this.props.clearErrors} history={this.props.history}/>
 
     // const symbolDetails = this.props.symbolDetails[this.props.match.params.assetSymbol];
     // const quantityOwned = symbolDetails ? parseFloat(symbolDetails['quantity']) : 0;
     // const details = this.props.details[this.state.symbol] || {};
-    debugger
+  
     const assetValues = Object.values(this.props.assets['interval'][this.state.symbol]);
     const currentPrice = parseFloat(assetValues[0]["4. close"]);
     const initialPrice = parseFloat(assetValues[assetValues.length - 1]["4. close"]);
