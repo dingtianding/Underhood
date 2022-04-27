@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Redirect,withRouter } from "react-router-dom";
+import { Switch, withRouter } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from '../util/route';
 
 import Splash from './splash/splash';
@@ -18,8 +18,6 @@ const App = () => (
     <ProtectedRoute exact path="/portfolio" component={PortfolioContainer} />
     <ProtectedRoute exact path='/assets/:assetSymbol' component={AssetShowContainter} />
     </Switch>
-
-
   </div>
 );
 export default withRouter(App);

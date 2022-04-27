@@ -3,6 +3,7 @@ import AssetChart from './chart/asset_chart'
 import NavBarContainer from '../navbar/navbar_container';
 import { formatDollarString } from '../../util/format_util';
 
+
 export default class AssetShow extends React.Component {
   constructor(props) {
     super(props);
@@ -15,14 +16,14 @@ export default class AssetShow extends React.Component {
   componentDidMount() {
     document.title = `${this.props.match.params.assetSymbol} | Underhood`;
       // this.props.fetchTransactions(this.props.user.id)
-      this.props.fetchAssetInterval(this.props.match.params.assetSymbol)
-        .then(() => {
-          Promise.all([
-            this.props.fetchAssetInterval(this.props.match.params.assetSymbol),
-            this.props.fetchAssetFull(this.props.match.params.assetSymbol),
-            this.props.fetchAssetDetails(this.props.match.params.assetSymbol)])
-            .then(() => this.setState({ loading: false, symbol: this.props.match.params.assetSymbol }));
-        })
+      // this.props.fetchAssetInterval(this.props.match.params.assetSymbol)
+      //   .then(() => {
+      //     Promise.all([
+      //       this.props.fetchAssetInterval(this.props.match.params.assetSymbol),
+      //       this.props.fetchAssetFull(this.props.match.params.assetSymbol),
+      //       this.props.fetchAssetDetails(this.props.match.params.assetSymbol)])
+      //       .then(() => this.setState({ loading: false, symbol: this.props.match.params.assetSymbol }));
+      //   })
   }
 
   componentDidUpdate(prevProps) {
@@ -74,10 +75,10 @@ export default class AssetShow extends React.Component {
     // const quantityOwned = symbolDetails ? parseFloat(symbolDetails['quantity']) : 0;
     // const details = this.props.details[this.state.symbol] || {};
   
-    const assetValues = Object.values(this.props.assets['interval'][this.state.symbol]);
-    const currentPrice = parseFloat(assetValues[0]["4. close"]);
-    const initialPrice = parseFloat(assetValues[assetValues.length - 1]["4. close"]);
-    const sign = ((currentPrice - initialPrice) > 0 ) ? '+' : '-';
+    // const assetValues = Object.values(this.props.assets['interval'][this.state.symbol]);
+    // const currentPrice = parseFloat(assetValues[0]["4. close"]);
+    // const initialPrice = parseFloat(assetValues[assetValues.length - 1]["4. close"]);
+    // const sign = ((currentPrice - initialPrice) > 0 ) ? '+' : '-';
 
     
     return (
@@ -89,14 +90,14 @@ export default class AssetShow extends React.Component {
         <div className='asset-show-body'>
           <div className='main-asset-chart'>
             <div className='assetChartContainter'>
-              <AssetChart assets={this.props.assets} name={details['Name']} symbol={this.state.symbol} />
+              {/* <AssetChart assets={this.props.assets} name={details['Name']} symbol={this.state.symbol} /> */}
             </div>
 
-            {this.renderAssetDetails(symbolDetails, quantityOwned, currentPrice, initialPrice)}
+            {/* {this.renderAssetDetails(symbolDetails, quantityOwned, currentPrice, initialPrice)} */}
 
             <div className='about'>
               <div className='about-title'>About Company</div>
-              <div className='about-body'>{details['Description']}</div>
+              {/* <div className='about-body'>{details['Description']}</div> */}
             </div>
             {/* <div className='stats'>
               <div className='stats-title'>Key statistics</div>

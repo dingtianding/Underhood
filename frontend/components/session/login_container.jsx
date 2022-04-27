@@ -6,7 +6,7 @@ import Login from './login'
 
 const mSTP = state => (
     {
-        errors: Object.values(state.sessionerr)
+        errors: Object.values(state.errors.session)
     }
 )
 

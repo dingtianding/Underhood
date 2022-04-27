@@ -1,4 +1,4 @@
-import { RECEIVE_ASSET_FULL, RECEIVE_ASSET_INTERVAL, RECEIVE_ASSET_DETAILS} from "../actions/asset_actions"
+import { RECEIVE_ASSET_FULL, RECEIVE_ASSET_INTERVAL, RECEIVE_ASSET_DETAILS} from "../../actions/asset_actions"
 
 const assetReducer = (state = {}, action) => {
   Object.freeze(state);
