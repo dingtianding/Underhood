@@ -114,3 +114,21 @@
     font-size: 24px;
   }
 
+.newsfeed_notices_box span#a {
+display: inline;
+font-weight: 550;
+}
+
+.newsfeed_notices_box:hover span#a {
+display: none;
+}
+
+.newsfeed_notices_box span#b {
+display: none;
+}
+
+.newsfeed_notices_box:hover span#b {
+display: inline;
+color: red;
+  }
+

@@ -45,7 +45,7 @@ function Newsfeed () {
                             <div className="newsfeed_notices_box">
                                 <p> New Free Stock Program!</p>
                                 <h1> Refer a friend. Pick fractional shares of stocks like Apple, Microsoft, or Alphabet! Limitations apply. </h1>
-                                <button>Invite friends</button>
+                                <button> <span id="a">Invite friends</span><span id="b">No friends avaliable :(</span></button>
                             </div>
                         </div>
 

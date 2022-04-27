@@ -1,10 +1,3 @@
-// export const fetchAssetPrice = (symbol, key) => {
-//   return $.ajax({
-//     method: 'GET', 
-//     url: `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${window.alphaAPIKey}`
-//   })
-// }
-
 export const fetchAssetDetails = (symbol) => {
   return $.ajax({
     method: 'GET', 
@@ -18,7 +11,6 @@ export const fetchAssetInterval = (symbol, interval='5min') => {
     url: `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=${interval}&apikey=${window.alphaAPIKey}`
   })
 }
-
 export const fetchAssetDaily = (symbol) => {
   return $.ajax({
     method: 'GET', 

@@ -11,6 +11,7 @@ class Signup extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   handleInput(type) {
@@ -23,6 +24,11 @@ class Signup extends React.Component {
     e.preventDefault();
     this.props.signup(this.state)
   }
+
+  demoLogin(e) {
+    e.preventDefault();
+    this.props.login({email: "1@aa.com", password: "123456"})
+}
   renderErrors() {
     let errors=[]
     for(let i=0;i< this.props.errors.length;i++){
@@ -99,7 +105,8 @@ class Signup extends React.Component {
                         <br />
                         <Link to="/login">Log in to complete your application.,</Link></p>
                         <br />
-                        <button onClick={this.handleSubmit}>Continue</button>
+                        <button className="signup-button-form"onClick={this.handleSubmit}>Continue</button>
+                        <button className="demo-button" onClick={this.demoLogin}>Demo Login</button>
                         <br/>
                         {this.renderErrors()}
                 </form>

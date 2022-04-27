@@ -142,7 +142,6 @@ const AssetChart = ({ name, assets, symbol }) => {
       plugins: [tooltipLine]
     };
 
-    // if (true) {
       setCurrentValue(parseFloat(data[data.length - 1]));
       setInitial(parseFloat(data[0]));
       setDifference(currentValue - initial);
@@ -157,7 +156,6 @@ const AssetChart = ({ name, assets, symbol }) => {
       const canvas = document.getElementById('assetChart');
       if (canvas) {
         const myChart = new Chart(canvas, config)
-      // }
 
       const activeIntervalId = `#${chartInterval.split(' ').join('-')}`;
       $(activeIntervalId).addClass('active-filter');
@@ -195,7 +193,6 @@ const AssetChart = ({ name, assets, symbol }) => {
   }
 
   let colorClass = sign === '+' ? 'greenText' : 'redText';
-  // changes color for transaction form and modal
   $('.changeColor').removeClass('greenText');
   $('.changeColor').removeClass('redText');
   $('.changeColor').addClass(colorClass);
