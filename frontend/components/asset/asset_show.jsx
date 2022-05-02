@@ -59,7 +59,7 @@ export default class AssetShow extends React.Component {
             </div>
 
             <div className='about'>
-              <div className='about-title'>About Company</div>
+              {/* <div className='about-title'>About Company</div> */}
             </div>
           </div>
         </div>
