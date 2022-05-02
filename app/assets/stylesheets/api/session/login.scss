@@ -1,7 +1,10 @@
 .login-page {
-    display: flex;
+    display: grid;
+    grid-template-columns: 55fr 45fr;
     align-items: center;
     background-color: white;
+    max-height: 100%; 
+    height: 100%;
   }
 
 .login-form h2{
@@ -31,12 +34,24 @@
 
 }
 
-.login-form{
+.login-img img{
+    height: 100%;
+    width: 100%;
+ }
+
+.login-form-container{
+    display: flex;
+    align-items: center;
     font-family: avenir;
-    margin-left: 5%;
-    margin-bottom: 5%;
     background-color: white;
-    width: 897px
+    width: 100%;
+    height: 100%;
+    padding-left: 10%;
+
+}
+
+.login-form{
+    transform: translateY(-25%)
 }
 
 .demo-button{

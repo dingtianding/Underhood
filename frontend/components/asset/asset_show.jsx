@@ -1,5 +1,5 @@
 import React from 'react';
-import AssetChart from './chart/asset_chart'
+import AssetChart from './left/asset_chart'
 import NavBarContainer from '../navbar/navbar_container';
 import { formatDollarString } from '../../util/format_util';
 import LoadingSpinner from './loading';

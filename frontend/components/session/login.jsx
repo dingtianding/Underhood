@@ -47,11 +47,11 @@ class Login extends React.Component {
   render() {
         return (
           <div className="login-page">
-
-            <img width="50%"src="https://cdn.robinhood.com/assets/generated_assets/632fcb3e7ed928b2a960f3e003d10b44.jpg" />
-
-            <div className="login-form">
-              <form width="50%">
+            <div className="login-img">
+              <img src="https://cdn.robinhood.com/assets/generated_assets/632fcb3e7ed928b2a960f3e003d10b44.jpg" />
+            </div>
+            <div className="login-form-container">
+              <form className="login-form">
               <h2>Log in to Underhood</h2>
 
                 <label>Email
