@@ -14,7 +14,7 @@ export default () => (
       <div className="splash-app-description">
           <div>
               <h1>Investing for</h1>
-              <h1>Everyone</h1>
+              <h1>Everyone1</h1>
           </div>
           <div>
               <h3 className="description">Commission-free investing, plus the tools you need to put your money in motion. Sign up and get your first stock for free. Certain limitations and fees apply.</h3>
