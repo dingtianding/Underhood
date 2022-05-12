@@ -59,8 +59,14 @@ export default class AssetShow extends React.Component {
             </div>
 
             <div className='about'>
-              {/* <div className='about-title'>About Company</div> */}
+              <div className='about-title'>About Company</div>
+              <div className='about-body'>{details['Description']}</div>
             </div>
+
+            {/* <div className='about'>
+              <div className='about-title'>News</div>
+              <div className='about-body'>News</div>
+            </div> */}
           </div>
         </div>
       </div>

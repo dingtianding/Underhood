@@ -5,6 +5,7 @@ import StockChart from '../../../../app/assets/images/stock.svg';
 import { Link } from 'react-router-dom';
 
 
+
 const key= "c8it1riad3ibm5ej5gu0"
 const BASE_URL = "https://finnhub.io/api/v1/quote?symbol=";
 const KEY_URL = `&token=${key}`;

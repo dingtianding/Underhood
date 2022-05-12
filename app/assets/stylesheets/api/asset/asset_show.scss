@@ -24,7 +24,7 @@
 .main-asset-chart {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 600px;
 }
 
 .assetDetailsDiv {
@@ -62,102 +62,19 @@
   border-bottom: 1px solid gray;
   margin-bottom: 20px;
   margin-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .about-body, .stats-body{
   margin-bottom: 50px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .chart-name {
   font-size: 32px;
-}
-.transaction-form {
-  border: 1px solid grey;
-  width: 275px;
-  height: auto;
-  margin-left: 50px;
-  background-color: #1E2124;
-  border-radius: 5px;
-  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.transaction-form-selections {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0 10px 0;
-}
-
-.transaction-button {
-  width: 100%;
-  height: 50px;
-  border-radius: 5px;
-  padding:15px 20px 20px 20px;
-  text-align: center;
-  vertical-align: center;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-.transaction-button-div {
-  width: 100%;
-}
-
-.transaction-options {
-  display: flex;
-  border-bottom: 1px solid gray;
-  padding: 0 20px;
-  cursor: pointer;
-}
-
-#buy-option, #sell-option {
-  padding: 15px 5px;
-  height: 100%;
-  margin-bottom: -1px;
-}
-
-#transaction-unit-input {
-  box-sizing: border-box;
-  width: 80px;
-  height: 35px;
-  background-color: #30363A;
-  border: none;
-  border-radius: 5px;
-  text-align: right;
-  padding: 0 12px;
-  color: white;
-}
-
-#unit-value {
-  width: 100px;
-  // text-align: left;
-  box-sizing: border-box;
-  height: 35px;
-  background-color: #30363A;
-  border: none;
-  border-radius: 5px;
-  padding: 0 12px;
-  color: white;
-}
-
-.value-subtitle {
-  font-size: 21px;
-}
-
-// #transaction-unit-input:focus, #unit-value:focus, #unit-value:enabled {
-//   border: 1px solid green;
-// }
-
-.transaction-form-body {
-  border-bottom: 1px solid gray;
-  margin: 0 20px;
-}
-
-.transaction-confirmation {
-  width: 100%;
-  padding-bottom: 20px;
-  border-top: 1px solid gray;
-}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -170,12 +87,7 @@ select > options {
   color: white;
 }
 
-.transaction-form-buy-power {
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  border-top: 1px solid gray;
-}
+
 
 .complete-title {
   font-weight: 15px;
@@ -198,53 +110,6 @@ select > options {
 .complete-button {
   width: 235px;
   margin: 20px;
-}
-
-.transaction-button.greenText {
-  background-color: #00C805;
-  color: #1E2124;
-}
-.transaction-button.greenText:hover {
-  background-color: rgba(38,208,43,1);
-  color: #1E2124;
-}
-
-.transaction-button.redText {
-  background-color: #FF5000;
-  color: #1E2124;
-}
-.transaction-button.redText:hover {
-  background-color: rgba(255,106,38,1);
-  color: #1E2124;
-}
-
-.transaction-form-buy-power.greenText, .purchase-option.active.greenText{
-  color: #00C805;
-}
-
-.transaction-form-buy-power.redText, .purchase-option.active.redText{
-  color: #FF5000;
-}
-
-.purchase-option.active.greenText {
-padding-bottom: 1px;
-border-bottom: 1px solid #00C805;
-}
-
-.purchase-option.active.redText{
-padding-bottom: 1px;
-border-bottom: 1px solid #FF5000;
-}
-
-.transaction-errors {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.transaction-form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .add-list-button {
