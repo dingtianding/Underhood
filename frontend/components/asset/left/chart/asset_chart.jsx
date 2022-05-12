@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { formatDollarString } from '../../../util/format_util';
+import { formatDollarString } from '../../../../util/format_util';
 
 const AssetChart = ({ name, assets, symbol }) => {
   

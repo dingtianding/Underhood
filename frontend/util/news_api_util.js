@@ -1,7 +1,7 @@
-export const fetchStockNews = (symbol, start, end) => {
+export const fetchAssetNews = (symbol, start, end) => {
   return $.ajax({
     method: 'GET',
-    url: `https://finnhub.io/api/v1/company-news?symbol=${symbol.toUpperCase()}&from=${start}&to=${end}&token=${window.finnhubAPIKey}`
+    url: `https://finnhub.io/api/v1/company-news?symbol=${symbol}&from=${start}&to=${end}&token=${APIKey}`
   })
 }
 
@@ -10,4 +10,8 @@ export const fetchAllMarketNews = (APIKey) =>
     url: `https://finnhub.io/api/v1/news?category=general&token=${APIKey}`,
   });
 
+const APIKey = "c8it1riad3ibm5ej5gu0";
 
+
+
+// https://finnhub.io/api/v1/company-news?symbol=AAPL&from=${start}&to=${end}&token=$c8it1riad3ibm5ej5gu0

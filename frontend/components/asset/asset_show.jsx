@@ -1,8 +1,9 @@
 import React from 'react';
-import AssetChart from './left/asset_chart'
+import AssetChart from './left/chart/asset_chart'
 import NavBarContainer from '../navbar/navbar_container';
 import { formatDollarString } from '../../util/format_util';
 import LoadingSpinner from './loading';
+import AssetNewsContainer from './left/news/asset_news_container';
 
 export default class AssetShow extends React.Component {
   constructor(props) {
@@ -14,11 +15,18 @@ export default class AssetShow extends React.Component {
   }
 
   componentDidMount() {
+    const today = new Date();
+    const yesterday = new Date(today);
+    yesterday.setDate(yesterday.getDate() - 5)
+
     document.title = `${this.props.match.params.assetSymbol} | Underhood`;
       Promise.all([
         this.props.fetchAssetInterval(this.props.match.params.assetSymbol),
         this.props.fetchAssetFull(this.props.match.params.assetSymbol),
-        this.props.fetchAssetDetails(this.props.match.params.assetSymbol)])
+        this.props.fetchAssetDetails(this.props.match.params.assetSymbol),
+        this.props.fetchAssetNews(this.props.match.params.assetSymbol, yesterday.toISOString().split('T')[0], new Date().toISOString().split('T')[0],"c8it1riad3ibm5ej5gu0"
+        )
+      ])
         .then(() => this.setState({ loading: false, symbol: this.props.match.params.assetSymbol }));
 
   }
@@ -63,10 +71,14 @@ export default class AssetShow extends React.Component {
               <div className='about-body'>{details['Description']}</div>
             </div>
 
-            {/* <div className='about'>
-              <div className='about-title'>News</div>
-              <div className='about-body'>News</div>
-            </div> */}
+            <div className='newsfeed_news'>
+              <div className='newsfeed_news_box'>
+              <h1>News</h1>
+              </div>
+              <div >
+                <AssetNewsContainer symbol= {this.props.match.params.assetSymbol} />
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchAssetFull, fetchAssetInterval, fetchAssetDetails, clearErrors } from '../../actions/asset_actions';
+import { fetchAssetNews } from '../../actions/stock_action';
 import { logout } from '../../actions/session_actions';
 import AssetShow from './asset_show';
 
@@ -17,6 +18,7 @@ const mapDispatchToProps = dispatch => ({
   fetchAssetFull: (symbol) => dispatch(fetchAssetFull(symbol)),
   fetchAssetInterval: (symbol) => dispatch(fetchAssetInterval(symbol)),
   fetchAssetDetails: (symbol) => dispatch(fetchAssetDetails(symbol)),
+  fetchAssetNews: (symbol, start, end) => dispatch(fetchAssetNews(symbol, start, end)),
   clearErrors: () => dispatch(clearErrors())
 })
 

@@ -1,10 +1,10 @@
 import React from "react";
-import CompanyNewsItem from "./news_item";
+import AssetNewsItem from "./asset_news_item";
 
-const CompanyNews = ({ companyNews }) => {
-  const news = Object.values(companyNews).map((article, i) => {
+const AssetNews = ({ assetNews }) => {
+  const news = Object.values(assetNews).map((article, i) => {
     return (
-      <CompanyNewsItem
+      <AssetNewsItem
         key={i}
         url={article.url}
         source={article.source}
@@ -21,4 +21,4 @@ const CompanyNews = ({ companyNews }) => {
     </div>
   );
 };
-export default CompanyNews;
+export default AssetNews;
