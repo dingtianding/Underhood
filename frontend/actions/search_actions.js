@@ -1,4 +1,4 @@
-import * as SearchApiUtil from '../util/search_api_util';
+import * as SearchApiUtil from '../util/news_api_util';
 
 export const RECEIVE_SEARCH = 'RECEIVE_SEARCH';
 

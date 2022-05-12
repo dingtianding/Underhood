@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, withRouter } from "react-router-dom";
-import { AuthRoute, ProtectedRoute } from '../util/route';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import Splash from './splash/splash';
 import SignupContainer from './session/signup_container';

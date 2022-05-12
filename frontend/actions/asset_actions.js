@@ -1,4 +1,4 @@
-import * as AssetApiUtil from '../util/asset_api_util';
+import * as AssetApiUtil from '../util/assets_api_util';
 
 export const RECEIVE_ASSET_FULL = 'RECEIVE_ASSET_FULL';
 export const RECEIVE_ASSET_INTERVAL = 'RECEIVE_ASSET_INTERVAL';

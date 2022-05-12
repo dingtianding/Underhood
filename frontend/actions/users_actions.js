@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/user.js';
+import * as APIUtil from '../util/user_util.js';
 
 export const SET_CURRENT_USER = "SET_CURRENT_USER";
 
