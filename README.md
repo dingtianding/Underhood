@@ -14,18 +14,24 @@ Underhood is a clone of a website version of a popular stock exchange app called
      * Rails
      * Redux
      * PostgreSQL
+     * HTML/CSS
+   * APIs: 
+     * Chart.js / Canvas
+     * Finnhub(News)
+     * AlphaVantage(Search & Live Price)
    
 ## Features
   * User signup and login as well as demo user function
   * Portfolio chart performance over time with sidebar of all owned stocks
-  * Stock chart displaying real time stock prices from a Stock API
+  * Price chart displaying real time stock prices from a Stock API
   * News section displaying latest current event from a New API
+  * Search bar displaying asset search result and navigate to specifc Asset page
+  * Asset page displaying real time price chart and latest current event of the specific asset
  
  ## Upcoming Features
-   * Search bar and Stock pages with stock data from API
-   * Purchase and sell stock in shares or dollars
    * Add stocks to watchlists
-   * Stock games with Leaderboard
+   * Purchase and sell stock in shares or dollars based on live price
+   * Stock simulatior game with leaderboard of all the users
 
 ## Code snippets
 
@@ -75,36 +81,48 @@ useEffect(() => {
   ```
 * ![news](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/news.png?raw=true)
 ```javascript
-export const NewsContextProvider = (props) => {
-  const [data, setData] = useState();
-  const apiKey = "9803bf19a56d4f2784a06878e6855667";
-
-  useEffect(() => {
-    axios
-      .get(
-        `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`
-      )
-      .then((response) => setData(response.data))
-      .catch((error) => console.log(error));
-  }, []);
+const CompanyNews = ({ companyNews }) => {
+  const news = Object.values(companyNews).map((article, i) => {
+    return (
+      <CompanyNewsItem
+        key={i}
+        url={article.url}
+        source={article.source}
+        headline={article.headline}
+        summary={article.summary}
+        image={article.image}
+      />
+    );
+  });
 
   return (
-    <NewsContext.Provider value={{ data }}>
-      {props.children}
-    </NewsContext.Provider>
+    <div className="news">
+      {news.slice(0, 5)}
+    </div>
   );
 };
 
-function NewsArticle({ data }) {
+const CompanyNewsItem = ({ url, source, headline, summary, image }) => {
   return (
-    <div className="news">
-      <span className="news_source">{data.source.name}</span>
-      <span className="news_published">{data.publishedAt.substr(11,12)}</span>
-      <h1 className="news_title">{data.title}</h1>
-      <p className="news_desc">{data.description}</p>
+    <div className="company-news-item-contain">
+      <a href={url} className="company-news-item-link" target="_blank">
+        <div className="news_box">
+          <h3 className="news_source">{source}</h3>
+          <h2 className="news_headline">{headline}</h2>
+          <p className="news_summary">
+            {summary.split("").slice(0, 75).join("") + "..."}
+          </p>
+        </div>
+        <img
+          src={image}
+          width="200px"
+          height="135px"
+          className="news_img"
+        />
+      </a>
     </div>
   );
-}
+};
  ```
 
 
