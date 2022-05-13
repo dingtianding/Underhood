@@ -62,10 +62,10 @@ export default () => (
          
       </div>
       <div>
-        <h1>About me</h1>
-        <a target="_blank" href="https://github.com/dingtianding/"><h2>Github</h2></a>
-        <a target="_blank" href="https://www.linkedin.com/in/deanding/"><h2>LinkedIn</h2></a>
-      </div>
+          <a href="https://angel.co/u/ding-tian-ding" className='splash-nav-links' target="_blank">AngelList</a>
+          <a href="https://www.linkedin.com/in/deanding/" className='splash-nav-links' target="_blank">LinkedIn</a>
+          <a href="https://github.com/dingtianding" className='splash-nav-links' target="_blank">GitHub</a>
+        </div>
   </div>
 </div>
 )
