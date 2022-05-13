@@ -13,5 +13,3 @@ export const fetchAllMarketNews = (APIKey) =>
 const APIKey = "c8it1riad3ibm5ej5gu0";
 
 
-
-// https://finnhub.io/api/v1/company-news?symbol=AAPL&from=${start}&to=${end}&token=$c8it1riad3ibm5ej5gu0
