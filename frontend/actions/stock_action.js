@@ -19,6 +19,6 @@ export const fetchAssetNews = (symbol, start, end) => dispatch => (
   StockAPIUtil.fetchAssetNews(symbol, start, end).then((asset) => dispatch(receiveAssetNews(asset, symbol)))
 )
 
-export const fetchMarketNews = () => dispatch => (
-  StockAPIUtil.fetchMarketNews().then(news => dispatch(receiveMarketNews(news)))
+export const fetchAllMarketNews = () => dispatch => (
+  StockAPIUtil.fetchAllMarketNews().then(news => dispatch(receiveMarketNews(news)))
 )
