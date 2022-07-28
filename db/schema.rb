@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_28_010632) do
+ActiveRecord::Schema.define(version: 2022_07_28_022807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 2022_07_28_010632) do
     t.decimal "buying_balance", default: "0.0"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
+  end
+
+  create_table "watchlist_assets", force: :cascade do |t|
+    t.integer "watchlist_id"
+    t.string "symbol"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["watchlist_id", "symbol"], name: "index_watchlist_assets_on_watchlist_id_and_symbol", unique: true
+    t.index ["watchlist_id"], name: "index_watchlist_assets_on_watchlist_id"
   end
 
   create_table "watchlist_items", force: :cascade do |t|
