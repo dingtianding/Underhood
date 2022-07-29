@@ -80,7 +80,7 @@ export default class PortfolioHeader extends React.Component {
     return (
       <nav className='port-nav'>
         <div className="nav_logo">
-                    {/* <Link to="/portfolio"><h1 id="nav_text">Underhood</h1></Link> */}
+                    <Link to="/portfolio"><h1 id="nav_text">Underhood</h1></Link>
         </div>
 
         <div className='search-bar-div'>
