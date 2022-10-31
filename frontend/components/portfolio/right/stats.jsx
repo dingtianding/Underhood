@@ -27,7 +27,7 @@ function Stats () {
         let testData = []
         const stocksList = ["TSLA", "GME", "FB", "AAPL", "AMZN", "NFLX", "GOOG", "GOOGL", "BABA", "BILI", "AMD", "ATVI", "MU", "XAR", "NIO", "ARKK", "S&P 500" ,"TWTR", "ABBV", "MSFT", "BRK.B", "KO", "JPM", "BAC", "WMT", "JNJ","GE"];
     
-        getMyStocks();
+        // getMyStocks();
         let promises = [];
         stocksList.map((stock) => {
           promises.push(
