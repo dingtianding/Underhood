@@ -48,10 +48,10 @@ class Login extends React.Component {
         return (
           <div className="login-page">
             <div className="login-img">
-              <img src="https://cdn.robinhood.com/assets/generated_assets/632fcb3e7ed928b2a960f3e003d10b44.jpg" />
+              <img src="https://aa-underhood.s3.us-east-2.amazonaws.com/login-side.jpeg" />
             </div>
-            <div className="login-form-container">
-              <form className="login-form">
+            <div className="login-form">
+              <form className="login-form-container">
               <h2>Log in to Underhood</h2>
 
                 <label>Email
@@ -71,9 +71,10 @@ class Login extends React.Component {
                 </label>
                 {this.renderErrors()}
                 <br/>
-
-                <button className="signin-button-form" onClick={this.handleSubmit}>Log In</button>
-                <button className="demo-button" onClick={this.demoLogin}>Demo Login</button>
+                <div className="buttons">
+                  <button className="login-button" onClick={this.handleSubmit}>Log In</button>
+                  <button className="demo-button" onClick={this.demoLogin}>Demo Login</button>
+                </div>
                 <br/>
                 <br/>
                 <p id="sign-up">Not on Underhood? <Link to="/signup">Create an account.</Link></p>

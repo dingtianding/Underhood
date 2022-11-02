@@ -15,7 +15,10 @@ const display = currentUser ? (
   );
   return (
     <header className="splash-nav">
-      <h1 className="logo">Underhood</h1>
+      <div className="logo">
+        <h1 className="logo-text">Underhood</h1> 
+        <img src={'https://aa-underhood.s3.us-east-2.amazonaws.com/logo-feather.png'} className='splash-feather'/>
+      </div>
       <div>
         {display}
       </div>
