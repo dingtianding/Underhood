@@ -39,33 +39,25 @@ export default () => (
   
   <div className="second-splash-component">
   <p>
-      <span>
-  See&nbsp;
-  <a href="https://github.com/dingtianding/Underhood/" target="_blank"><span className="tech-model">here
-  </span> 
+    <span>
+        See&nbsp; <a href="https://github.com/dingtianding/Underhood/" target="_blank"><span className="tech-model">here
+        </span> 
   </a>
   &nbsp;to learn more about the technologies used in this clone.
   </span>
-  {/* <button id="myBtn">Modal</button> */}
-  <div id="myModal" className="modal">
-  <div className="modal-content">
-    <span className="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
-
-
-</div>
   </p>
+
   </div>
   <div className="splash-footer">
-      <div>
-         
-      </div>
-      <div>
-          <a href="https://angel.co/u/ding-tian-ding" className='splash-nav-links' target="_blank">AngelList</a>
-          <a href="https://www.linkedin.com/in/deanding/" className='splash-nav-links' target="_blank">LinkedIn</a>
-          <a href="https://github.com/dingtianding" className='splash-nav-links' target="_blank">GitHub</a>
-        </div>
+    <div>
+        
+    </div>
+
+    <div>
+        <a href="https://github.com/dingtianding" className='splash-nav-links' target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/deanding/" className='splash-nav-links' target="_blank">LinkedIn</a>
+        <a href="https://angel.co/u/ding-tian-ding" className='splash-nav-links' target="_blank">AngelList</a>
+    </div>
   </div>
 </div>
 )
