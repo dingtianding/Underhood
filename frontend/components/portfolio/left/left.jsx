@@ -5,6 +5,8 @@ import LineGraph from './chart/line_graph'
 import TimeLine from './chart/timeline'
 import CompanyNews from "./news/news";
 import PopularList from "./popular/popular_list";
+// import BuyingPower from "./buyingpower/buying_power";
+
 
 
 
