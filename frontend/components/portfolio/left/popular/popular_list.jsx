@@ -1,7 +1,10 @@
 import React from "react";
 
 const PopularList = ({ }) => {
-
+// -1 = Box
+// -2 = Border
+// -3 = Icon
+// -4 = Text
 
   return (
     <section className="dashboard-list">
@@ -14,12 +17,12 @@ const PopularList = ({ }) => {
                             </header>
                             <div className="dashboard-list-items">
                               <div className="dashboard-list-items-1">
-                                <div className="dashboard-list-items-2">
+                                <a className="dashboard-list-items-2" href="https://robinhood.com/lists/robinhood/97b746a5-bc2f-4c64-a828-1af0fc399bf9">
                                   <div className="dashboard-list-items-3">
                                     <img className="dashboard-list-items-img" src="https://cdn.robinhood.com/app_assets/list_illustrations/crypto/portrait_48/1x.png" alt="" />
                                   </div>
                                   <span className="dashboard-list-items-4">Crypto</span>
-                                </div>
+                                </a>
                               </div>
 
                               <div className="dashboard-list-items-1-1">

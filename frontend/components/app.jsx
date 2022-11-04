@@ -10,7 +10,7 @@ import AssetShowContainter from './asset/asset_show_container';
 
 
 const App = () => (
-  <div>
+  <div className="App">
     <Switch>
     <AuthRoute exact path="/" component={Splash} />
     <AuthRoute exact path="/signup" component={SignupContainer} />

@@ -5,6 +5,14 @@ class User < ApplicationRecord
     validates :password, length: { minimum: 1, allow_nil: true }
 
     after_initialize :ensure_session_token
+
+    has_many :transactions,
+    foreign_key: :owner_id,
+    class_name: "PortfolioTransaction"
+  
+    has_many :watchlists
+  
+    has_many :watchlist_assets, through: :watchlists
   
     def self.find_by_credentials(email, password)
       user = User.find_by(email: email)

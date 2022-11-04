@@ -11,7 +11,7 @@ const BASE_URL = "https://finnhub.io/api/v1/quote?symbol=";
 const KEY_URL = `&token=${key}`;
 
 
-function Stats () {
+function PortfolioRight () {
 
     const [stockData, setstockData] = useState([])
 
@@ -25,7 +25,7 @@ function Stats () {
 
     useEffect(() => {
         let testData = []
-        const stocksList = ["TSLA", "GME", "FB", "AAPL", "AMZN", "NFLX", "GOOG", "GOOGL", "BABA", "BILI", "AMD", "ATVI", "MU", "XAR", "NIO", "ARKK", "S&P 500" ,"TWTR", "ABBV", "MSFT", "BRK.B", "KO", "JPM", "BAC", "WMT", "JNJ","GE"];
+        const stocksList = ["TSLA", "GME", "META", "AAPL", "AMZN", "NFLX", "GOOG", "GOOGL", "BABA", "BILI", "AMD", "ATVI", "MU", "XAR", "NIO", "ARKK", "S&P 500" ,"TWTR", "ABBV", "MSFT", "BRK.B", "KO", "JPM", "BAC", "WMT", "JNJ","GE"];
     
         let promises = [];
         stocksList.map((stock) => {
@@ -86,7 +86,7 @@ function Stats () {
               </div>
         </div>
               <div className="stats_header">
-                  <p>Lists</p>
+                  <p>Watchlists</p>
               </div>
               <div className="stats__content">
           <div className="stats__rows">
@@ -105,6 +105,6 @@ function Stats () {
     )
 }
 
-export default Stats
+export default PortfolioRight
 
 // c8it1riad3ibm5ej5gu0   API Key

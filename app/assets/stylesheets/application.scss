@@ -13,26 +13,27 @@
  *= require_tree .
  *= require_self
  */
-
+// css reset
  @import './reset';
+// Splash Page
  @import './api/splash/splash.scss';
- @import './api/splash/nav_bar.scss';
+ @import './api/splash/splash_bar.scss';
  @import './api/splash/modal.scss';
-
+// Sessions(Log in + Sign up)
  @import './api/session/login.scss';
  @import './api/session/signup.scss';
-
+// Portfolio(Home Page)
  @import './api/portfolio/portfolio.scss';
  @import './api/portfolio/nav_bar.scss';
  @import './api/portfolio/line_graph.scss';
  @import './api/portfolio/news.scss';
  @import './api/portfolio/stats.scss';
  @import './api/portfolio/newsfeed.scss';
-
+ @import './api/portfolio/popular.scss';
+// Asset(Stock)
  @import './api/asset/asset_show.scss'; 
  @import './api/asset/asset_chart.scss'; 
  @import './api/asset/loading_spinner.scss'; 
-
 
 
 

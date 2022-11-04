@@ -79,9 +79,11 @@ export default class PortfolioHeader extends React.Component {
   render() {
     return (
       <nav className='port-nav'>
-        <div className="nav_logo">
-                    <Link to="/portfolio"><h1 id="nav_text">Underhood</h1></Link>
-        </div>
+                    
+        <div className="logo">
+          <Link style={{textDecoration: 'none'}} to="/portfolio"> <h1 className="logo-text2">Underhood</h1> </Link>
+        <img src={'https://aa-underhood.s3.us-east-2.amazonaws.com/logo-feather.png'} className='splash-feather'/>
+      </div>
 
         <div className='search-bar-div'>
           <div className='search-bar-flex'>

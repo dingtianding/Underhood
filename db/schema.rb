@@ -10,18 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_28_022807) do
+ActiveRecord::Schema.define(version: 2022_11_03_232827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "stocks", force: :cascade do |t|
+  create_table "asset_transactions", force: :cascade do |t|
     t.string "symbol", null: false
-    t.string "name", null: false
+    t.integer "owner_id"
+    t.boolean "is_purchase"
+    t.float "quantity"
+    t.float "transaction_price"
+    t.float "current_total", default: 0.0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_stocks_on_name", unique: true
-    t.index ["symbol"], name: "index_stocks_on_symbol", unique: true
+    t.index ["owner_id"], name: "index_asset_transactions_on_owner_id"
+    t.index ["symbol"], name: "index_asset_transactions_on_symbol"
   end
 
   create_table "users", force: :cascade do |t|
@@ -46,21 +50,14 @@ ActiveRecord::Schema.define(version: 2022_07_28_022807) do
     t.index ["watchlist_id"], name: "index_watchlist_assets_on_watchlist_id"
   end
 
-  create_table "watchlist_items", force: :cascade do |t|
-    t.integer "stock_id", null: false
-    t.integer "watchlist_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["stock_id"], name: "index_watchlist_items_on_stock_id"
-    t.index ["watchlist_id"], name: "index_watchlist_items_on_watchlist_id"
-  end
-
   create_table "watchlists", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "user_id", null: false
+    t.integer "user_id"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_watchlists_on_name", unique: true
+    t.index ["name"], name: "index_watchlists_on_name"
+    t.index ["user_id", "name"], name: "index_watchlists_on_user_id_and_name", unique: true
+    t.index ["user_id"], name: "index_watchlists_on_user_id"
   end
 
 end

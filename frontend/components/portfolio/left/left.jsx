@@ -10,7 +10,7 @@ import PopularList from "./popular/popular_list";
 
 
 
-function Newsfeed () {
+function PortfolioLeft () {
     const [companyNews, setCompanyNews] = useState([]);
     const APIKey = "c8it1riad3ibm5ej5gu0";
 
@@ -76,4 +76,4 @@ function Newsfeed () {
     )
 }
 
-export default Newsfeed;
+export default PortfolioLeft;

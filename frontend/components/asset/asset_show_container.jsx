@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import { fetchAssetFull, fetchAssetInterval, fetchAssetDetails, clearErrors } from '../../actions/asset_actions';
-import { fetchAssetNews } from '../../actions/stock_action';
+import { fetchAssetNews } from '../../actions/news_action';
 import { logout } from '../../actions/session_actions';
 import AssetShow from './asset_show';
 
 const mapStateToProps = (state, ownProps) => {
-  return {
-  user: state.entities.users[state.session.id],
-  assets: state.entities.assets,
-  details: state.entities.assets.details,
-  assetErrors: state.errors.asset
-}
+    return {
+    user: state.entities.users[state.session.id],
+    assets: state.entities.assets,
+    details: state.entities.assets.details,
+    assetErrors: state.errors.asset
+  }
 }
 
 const mapDispatchToProps = dispatch => ({

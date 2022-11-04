@@ -1,8 +1,11 @@
-import React from 'react';
+import * as React from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 const LoadingSpinner = (props) => {
   
   let errors;
+  
   if (props.errors && props.errors.length) {
     errors = <div> {props.errors[0]} </div>;
     setTimeout(() => props.history.push('/'), 2000);
@@ -13,11 +16,11 @@ const LoadingSpinner = (props) => {
   }
 
   return (
-    <div id='spinner-div'>
-      <div id='spinner'></div>
+    <Box className='spinner-div'>
+      <CircularProgress color="success" size='80' />
       <br />
       <div className='loading-error'>{errors}</div>
-    </div>
+    </Box>
   )
 }
 

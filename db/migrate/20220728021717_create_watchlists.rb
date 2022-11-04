@@ -1,8 +1,9 @@
-class Stocks < ActiveRecord::Migration[5.2]
+class CreateWatchlists < ActiveRecord::Migration[5.2]
   def change
     create_table :watchlists do |t|
       t.integer :user_id, presence: true
       t.string :name, presence: true
+      t.string :icon, default: "&#128161;", null: false
       t.timestamps
     end
     add_index :watchlists, :user_id
