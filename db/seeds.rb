@@ -11,4 +11,5 @@ demo_account = User.create(
     first_name: 'demo', 
     last_name: 'user', 
     password: '123456', 
+    buying_power: 69420.88
 )

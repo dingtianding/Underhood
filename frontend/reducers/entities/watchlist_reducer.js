@@ -1,4 +1,11 @@
-import { RECEIVE_WATCHLISTS, RECEIVE_WATCHLIST, DELETE_WATCHLIST, RECEIVE_WATCHLIST_ASSET, DELETE_WATCHLIST_ASSET} from '../actions/watchlist_actions';
+import { 
+  RECEIVE_WATCHLISTS, 
+  RECEIVE_WATCHLIST, 
+  DELETE_WATCHLIST, 
+  RECEIVE_WATCHLIST_ASSET, 
+  DELETE_WATCHLIST_ASSET
+} 
+from '../../actions/watchlist_actions';
 
 
 const watchlistReducer = (state = {}, action) => {

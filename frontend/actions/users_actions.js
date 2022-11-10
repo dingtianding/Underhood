@@ -22,3 +22,9 @@ export const editCurrentUser = user => dispatch =>{
         APIUtil.editCurrentUser(user).then(user => dispatch(receiveCurrentUser(user)))
     )
 }
+
+export const addFunds = (userId, amount) => dispatch => {
+    return SessionApiUtil.addFunds(userId, amount)
+      .then(user => dispatch(receiveUser(user)))
+      .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
+  }  

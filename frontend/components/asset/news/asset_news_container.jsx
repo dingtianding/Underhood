@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { fetchAssetNews } from "../../../../util/news_api_util";
+import { fetchAssetNews } from "../../../util/news_api_util";
 
 import AssetNews from './asset_news'
 

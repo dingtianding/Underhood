@@ -29,3 +29,4 @@ export const createTransaction = (transaction) => dispatch => {
     .then(transaction => dispatch(receiveTransaction(transaction)))
     .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
 }
+

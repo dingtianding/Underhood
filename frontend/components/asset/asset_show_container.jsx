@@ -6,10 +6,12 @@ import AssetShow from './asset_show';
 
 const mapStateToProps = (state, ownProps) => {
     return {
-    user: state.entities.users[state.session.id],
-    assets: state.entities.assets,
-    details: state.entities.assets.details,
-    assetErrors: state.errors.asset
+  user: state.entities.users[state.session.id],
+  assets: state.entities.assets,
+  symbolDetails: state.entities.transactions.symbols,
+  details: state.entities.assets.details,
+  errors: state.errors.transaction,
+  assetErrors: state.errors.asset
   }
 }
 

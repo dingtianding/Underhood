@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2022_11_03_232827) do
     t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.decimal "buying_balance", default: "0.0"
+    t.decimal "buying_power", default: "0.0"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
   end

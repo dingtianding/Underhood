@@ -2,7 +2,7 @@ import * as React from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 
-const LoadingSpinner = (props) => {
+const Loading = (props) => {
   
   let errors;
   
@@ -16,7 +16,7 @@ const LoadingSpinner = (props) => {
   }
 
   return (
-    <Box className='spinner-div'>
+    <Box className='loading-div'>
       <CircularProgress color="success" size='80' />
       <br />
       <div className='loading-error'>{errors}</div>
@@ -24,4 +24,4 @@ const LoadingSpinner = (props) => {
   )
 }
 
-export default LoadingSpinner;
+export default Loading;

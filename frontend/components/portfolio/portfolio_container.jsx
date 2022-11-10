@@ -1,37 +1,19 @@
-import React from 'react'
 import {connect} from 'react-redux'
-import {getCurrentUser} from '../../actions/users_actions'
+import {getCurrentUser, addFunds} from '../../actions/users_actions'
+
 import Portfolio from './portfolio'
 
-class PortfolioContainer extends React.Component {
-    constructor(props) {
-        super(props)
-    }
+const mapStateToProps = (state) => ({
+        user: state.entities.users[state.session.currentUser.id],
+        errors: state.entities.errors || []
 
-    componentDidMount() {
-        this.props.getCurrentUser(this.props.session.id)
-    }
+    })
 
-    render() {
 
-        return (
-            <Portfolio theme={this.props.theme} logout={this.props.logout} user={this.props.user} component="Portfolio"></Portfolio>
-        )
-    }
-}
+const mapDispatchToProps = dispatch => ({
+        getCurrentUser: userId => dispatch(getCurrentUser(userId)),
+        addFunds: (userId, amount) => dispatch(addFunds(userId, amount))
+    })
 
-const mSTP = state =>(
-    {
-        session: state.session,
-        user: state.user,
-        theme: state.theme
-    }
-)
 
-const mDTP = dispatch =>(
-    {
-        getCurrentUser: userId => dispatch(getCurrentUser(userId))
-    }
-)
-
-export default connect(mSTP,mDTP)(PortfolioContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(Portfolio);

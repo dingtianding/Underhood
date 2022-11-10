@@ -1,4 +1,7 @@
-import { RECEIVE_TRANSACTION, RECEIVE_TRANSACTIONS} from "../actions/transaction_action";
+import { RECEIVE_TRANSACTION, 
+  RECEIVE_TRANSACTIONS
+} 
+from "../../actions/transaction_action";
 
 
 const transactionReducer = (state = {}, action) => {

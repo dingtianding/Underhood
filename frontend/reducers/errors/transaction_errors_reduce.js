@@ -1,4 +1,4 @@
-import { RECEIVE_TRANSACTION_ERRORS, RECEIVE_TRANSACTIONS, RECEIVE_TRANSACTION } from "../actions/transaction_action";
+import { RECEIVE_TRANSACTION_ERRORS, RECEIVE_TRANSACTIONS, RECEIVE_TRANSACTION } from "../../actions/transaction_action";
 
 const transactionErrorsReducer = (state = [], action) => {
   Object.freeze(state);

@@ -1,7 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import axios from "axios";
 import StatsRow from "./list/stats_row";
-import StockChart from '../../../../app/assets/images/stock.svg';
 import { Link } from 'react-router-dom';
 
 
@@ -11,7 +10,7 @@ const BASE_URL = "https://finnhub.io/api/v1/quote?symbol=";
 const KEY_URL = `&token=${key}`;
 
 
-function PortfolioRight () {
+function Sidebar () {
 
     const [stockData, setstockData] = useState([])
 
@@ -105,6 +104,6 @@ function PortfolioRight () {
     )
 }
 
-export default PortfolioRight
+export default Sidebar
 
 // c8it1riad3ibm5ej5gu0   API Key

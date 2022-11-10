@@ -39,3 +39,4 @@ export const login = user => dispatch => (
 
 export const logout = () => dispatch => deleteSession()
   .then(() => dispatch(logoutCurrentUser()));
+

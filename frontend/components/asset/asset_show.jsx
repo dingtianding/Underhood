@@ -1,9 +1,9 @@
 import React from 'react';
-import AssetChart from './left/chart/asset_chart'
+import AssetChart from './chart/asset_chart'
 import NavBarContainer from '../navbar/navbar_container';
 import { formatDollarString } from '../../util/format_util';
-import LoadingSpinner from './loading';
-import AssetNewsContainer from './left/news/asset_news_container';
+import LoadingSpinner from '../loading';
+import AssetNewsContainer from './news/asset_news_container';
 
 export default class AssetShow extends React.Component {
   constructor(props) {
@@ -71,8 +71,8 @@ export default class AssetShow extends React.Component {
               <div className='about-body'>{details['Description']}</div>
             </div>
 
-            <div className='newsfeed_news'>
-              <div className='newsfeed_news_box'>
+            <div className='left-news'>
+              <div className='left-news_box'>
               <h1>News</h1>
               </div>
               <div >
