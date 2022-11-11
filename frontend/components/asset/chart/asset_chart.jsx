@@ -3,12 +3,12 @@ import { formatDollarString } from '../../../util/format_util';
 
 const AssetChart = ({ name, assets, symbol }) => {
   
-  if (jQuery.isEmptyObject(assets) || !assets['interval'] || !assets['full']) return null;
+  if (jQuery.isEmptyObject(assets) || !assets['interval']) return null;
 
   const [days, setDays] = useState(1);
   const [chartInterval, setChartInterval] = useState('Today');
 
-  const period = (days === 1) ? 'interval' : 'full';
+  const period = (days === 1) ? 'interval' : 'interval';
   const assetObject = assets[period][symbol];
 
   const assetKeys = Object.keys(assetObject);

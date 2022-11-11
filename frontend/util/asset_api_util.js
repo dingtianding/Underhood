@@ -12,7 +12,6 @@ export const fetchAssetInterval = (symbol, interval='5min') => {
   })
 }
 
-
 export const fetchSearch = (keyword) => {
   return $.ajax({
     method: 'GET',

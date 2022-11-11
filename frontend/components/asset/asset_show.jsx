@@ -22,7 +22,6 @@ export default class AssetShow extends React.Component {
     document.title = `${this.props.match.params.assetSymbol} | Underhood`;
       Promise.all([
         this.props.fetchAssetInterval(this.props.match.params.assetSymbol),
-        this.props.fetchAssetFull(this.props.match.params.assetSymbol),
         this.props.fetchAssetDetails(this.props.match.params.assetSymbol),
         this.props.fetchAssetNews(this.props.match.params.assetSymbol, yesterday.toISOString().split('T')[0], new Date().toISOString().split('T')[0],"c8it1riad3ibm5ej5gu0"
         )
@@ -53,7 +52,7 @@ export default class AssetShow extends React.Component {
     const currentPrice = parseFloat(assetValues[0]["4. close"]);
     const initialPrice = parseFloat(assetValues[assetValues.length - 1]["4. close"]);
     const sign = ((currentPrice - initialPrice) > 0 ) ? '+' : '-';
-
+    console.log(this.props)
     
     return (
 

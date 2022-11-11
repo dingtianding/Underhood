@@ -1,6 +1,5 @@
 import * as AssetApiUtil from '../util/asset_api_util';
 
-export const RECEIVE_ASSET_FULL = 'RECEIVE_ASSET_FULL';
 export const RECEIVE_ASSET_INTERVAL = 'RECEIVE_ASSET_INTERVAL';
 export const RECEIVE_ASSET_DETAILS = 'RECEIVE_ASSET_DETAILS';
 export const RECEIVE_ASSET_ERRORS = 'RECEIVE_ASSET_ERRORS';
@@ -37,18 +36,6 @@ export const fetchAssetInterval = (symbol, interval) => dispatch => {
       if (payload['Error Message']) return dispatch(receiveErrors(payload['Error Message']));
       dispatch(receiveAssetInterval(payload));
       if (!payload['Note']) sessionStorage.setItem(`interval-${symbol}`, JSON.stringify(payload));
-    })
-}
-
-export const fetchAssetFull = (symbol) => dispatch => {
-  if (sessionStorage.getItem(`full-${symbol}`)) {
-    return dispatch(receiveAssetFull(JSON.parse(sessionStorage.getItem(`full-${symbol}`))))
-  }
-  return AssetApiUtil.fetchAssetFull(symbol)
-    .then(payload => {
-      if (payload['Error Message']) return dispatch(receiveErrors(payload['Error Message']));
-      dispatch(receiveAssetFull(payload));
-      if (!payload['Note']) sessionStorage.setItem(`full-${symbol}`, JSON.stringify(payload));
     })
 }
 

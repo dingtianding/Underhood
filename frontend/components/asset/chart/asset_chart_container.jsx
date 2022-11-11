@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import { fetchAssetFull, fetchAssetDaily } from '../../actions/asset_actions';
 import AssetChart from './asset_chart';
 
 const mapStateToProps = (state, ownProps) => {
