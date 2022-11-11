@@ -6,7 +6,7 @@ import SideBar from './sidebar'
 import LineGraph from './chart/line_graph'
 import TimeLine from './chart/timeline'
 import AddFundsForm from './form/add_funds_form';
-import LoadingSpinner from '../loading';
+import Loading from '../loading';
 
 import { formatDollarString } from '../../util/format_util'
 
