@@ -154,7 +154,7 @@ export default class TransactionForm extends React.Component {
           <div className=''>
             <div className='complete-body'>
               <span>Amount {this.state.is_purchase ? 'Invested' : 'Sold'}</span>
-              <span>{purchaseTotal}</span>
+              <span>${purchaseTotal}</span>
             </div>
             <div className='complete-body'>
               <span>Esimated Shares</span>

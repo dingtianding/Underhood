@@ -6,7 +6,6 @@ import SplashBarContainer from './splash_bar_container';
 export default class Splash extends React.Component {
     constructor(props) {
       super(props);
-      document.body.style.backgroundColor = 'white';
     }
     
     hideModal() {
