@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { fetchAllMarketNews } from "../../util/news_api_util";
 
 import CompanyNews from "./news/news";
-import PopularList from "./list/popular_list";
+import PopularList from "./news/popular_list";
 
 
 

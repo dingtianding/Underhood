@@ -1,0 +1,274 @@
+.watchlist-show {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  font-size: 13px;
+}
+
+.watchlist-body{
+  display: flex;
+  width: fit-content;
+  margin: 5% auto;
+}
+
+.delete-question {
+  display: flex;
+  justify-content: center;
+}
+
+.watchlist-main {
+  width: 700px;
+  margin: 30px;
+}
+
+.watchlist-aside {
+  border: 1px solid grey;
+  min-width: 275px;
+  height: 600px;
+  margin: 40px 50px;
+  background-color: #1E2124;
+  border-radius: 5px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.watchlist-aside::-webkit-scrollbar {
+  display: none;
+}
+
+.watchlist-aside-title {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.watchlist-sort-options {
+  font-size: 18px;
+}
+
+.watchlist-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.watchlist-table-title {
+  font-size: 24px;
+  width: 80%;
+}
+
+.watchlist-table-name {
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  font-size: 24px;
+  border: none;
+  width: 100%;
+}
+
+.watchlist-table-name:focus {
+  background-color: #1E2124;
+  border: 1px solid #ECD0F2;
+}
+.watchlist-table-count{
+  padding-left: 5px;
+  font-size: 13px;
+}
+
+.watchlist-table-count, th  {
+  color: #919FA6;
+}
+table {
+  width: 100%;
+}
+
+table, th, td {
+  border-bottom: 1px solid gray;
+  padding: 15px 15px 15px 0;
+  text-align: left;
+}
+
+th, .filter-icon, .watchlist-delete-list {
+  cursor: pointer;
+}
+
+th:hover, .filter-icon:hover, .watchlist-delete-list:hover {
+  color: #00C805;
+}
+
+.sort-caret {
+  float: right;
+  display: inline-block;
+}
+
+.watchlist-sort-columns {
+  min-width: 70px;
+}
+.watchlist-name-col  {
+  min-width: 250px;
+}
+
+.watchlist-cap-col {
+  min-width: 80px;
+}
+
+// .fa-filter {
+//   padding-right: 10px;
+//   cursor: pointer;
+// }
+
+.caret {
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  display: inline-block;
+}
+
+.caret.up {
+  border-bottom-color: #00C805;
+}
+
+.caret.down {
+  border-top-color: #FF5000;
+}
+
+.sort, .reverse {
+  color: #00C805;
+  border-bottom: 1px solid #00C805;
+}
+.fa-angle-down, .fa-angle-up, .delete-watchlist-asset:hover {
+  color: #00C805;
+}
+
+.delete-watchlist-asset, .close-delete {
+  cursor: pointer;
+  font-size: 20px;
+  padding-right: 0;
+}
+
+.confirm-delete-div {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 13, 18, 0.5);
+  display: flex;
+  justify-content: center;
+  padding-top: 20%;
+  z-index: 10;
+}
+
+.confirm-delete {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #1E2124;
+  
+}
+
+.delete-question {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.delete-button {
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  background-color: rgb(255,80,0);
+  border-radius: 5px;
+}
+
+.delete-button:hover {
+  background-color: rgba(255,106,38,1);
+}
+
+.hidden{
+  display:none
+}
+
+.watchlist-icon {
+  width: 50px;
+  height: 60px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.watchlist-icon:hover {
+  cursor: pointer;
+  background-color: rgb(64,73,78);
+}
+
+.empty-table {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+  line-height: 2;
+}
+
+.empty-table-title {
+  font-size: 21px;
+}
+
+.empty-table-text {
+  font-size: 15px;
+}
+
+.table-row:hover{
+  cursor: pointer;
+  background-color: #1E2124;
+}
+
+.delete-watchlist-asset:hover .table-row {
+  background-color: black;
+}
+
+.toggle-show-new-form {
+  font-size: 20px;
+}
+
+.toggle-show-new-form:hover {
+  color: #00C805;
+  cursor: pointer;
+}
+
+.watchlist-show .new-list-input {
+  width: 170px;
+  height: 35px;
+}
+
+.watchlist-show .cancel-new-list-button, .watchlist-show .create-new-list-button {
+  border-radius: 20px;
+}
+
+.watchlist-side-bar-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watchlist-side-bar-item .watchlist-side-bar-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watchlist-side-bar-item .fa-ellipsis-h {
+  padding: 10px;
+}
+
+.watchlist-delete-list {
+  padding: 10px;
+  font-size: 30px;
+}

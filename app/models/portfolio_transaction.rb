@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: Asset_transactions
+# Table name: portfolio_transactions
 #
 #  id                :bigint           not null, primary key
 #  owner_id          :integer          not null
@@ -12,7 +12,7 @@
 #  current_total     :float            default(0.0), not null
 #  symbol            :string           not null
 #
-class AssetTransaction < ApplicationRecord
+class PortfolioTransaction < ApplicationRecord
   validates :symbol, :owner_id, :quantity, :transaction_price, presence: true
   validates :is_purchase, inclusion: { in: [true, false] }
   belongs_to :owner,
@@ -34,19 +34,20 @@ class AssetTransaction < ApplicationRecord
       when 'Past Year'
         days_ago = 365.day.ago
       else
-        return AssetTransaction.where(owner_id: owner_id)
+        return PortfolioTransaction.where(owner_id: owner_id)
     end
-    AssetTransaction.where(owner_id: owner_id).where("created_at > ?", days_ago)
+    PortfolioTransaction.where(owner_id: owner_id).where("created_at > ?", days_ago)
   end
 
   def update_total
     return errors[:base] << 'Please enter a valid amount' if (self.quantity.nil? || self.quantity == 0)
     price = self.quantity * self.transaction_price
     owner = User.find_by(id: self.owner_id)
-    lastTransaction = AssetTransaction.where(owner_id: self.owner_id).last
+    lastTransaction = PortfolioTransaction.where(owner_id: self.owner_id).last
 
     prev_price = lastTransaction ? lastTransaction.current_total : 0;
-    quantityOwned =  AssetTransaction.where(owner_id: self.owner_id, symbol: self.symbol).sum(:quantity);
+    # prev_price = lastTransaction ? lastTransaction.current_total : owner.buying_power
+    quantityOwned =  PortfolioTransaction.where(owner_id: self.owner_id, symbol: self.symbol).sum(:quantity);
     if (quantity > 0)
       return errors[:base] << 'Not Enough Buying Power' if (owner.buying_power < price)
     else

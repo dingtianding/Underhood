@@ -4,6 +4,10 @@ import NavBarContainer from '../navbar/navbar_container';
 import { formatDollarString } from '../../util/format_util';
 import LoadingSpinner from '../loading';
 import AssetNewsContainer from './news/asset_news_container';
+import TransactionForm from './form/transaction_form';
+import WatchlistAssetModalContainer from '../watchlist/watchlist_asset_modal_container';
+
+
 
 export default class AssetShow extends React.Component {
   constructor(props) {
@@ -45,18 +49,20 @@ export default class AssetShow extends React.Component {
     
     if (this.state.loading || !this.props.details || !this.props.assets['interval'] || !this.props.details[this.state.symbol] || !this.props.assets['interval'][this.state.symbol]) return <LoadingSpinner/>
     if (this.props.assetErrors.length) return <LoadingSpinner errors={this.props.assetErrors} clearErrors={this.props.clearErrors} history={this.props.history}/>
+    console.log(this.props)
 
-    const details = this.props.details[this.state.symbol] || {};
-  
+    const symbolDetails = this.props.symbolDetails[this.props.match.params.assetSymbol];
+    const quantityOwned = symbolDetails ? parseFloat(symbolDetails['quantity']) : 0;
+    const details = this.props.details[this.state.symbol] || {};  
     const assetValues = Object.values(this.props.assets['interval'][this.state.symbol]);
     const currentPrice = parseFloat(assetValues[0]["4. close"]);
     const initialPrice = parseFloat(assetValues[assetValues.length - 1]["4. close"]);
     const sign = ((currentPrice - initialPrice) > 0 ) ? '+' : '-';
-    console.log(this.props)
     
     return (
 
       <div className='asset-show'>
+        <WatchlistAssetModalContainer symbol={this.state.symbol} sign={sign}/>
         <NavBarContainer />
 
         <div className='asset-show-body'>
@@ -72,13 +78,14 @@ export default class AssetShow extends React.Component {
 
             <div className='left-news'>
               <div className='left-news_box'>
-              <h1>News</h1>
+                <h1>News</h1>
               </div>
               <div >
                 <AssetNewsContainer symbol= {this.props.match.params.assetSymbol} />
               </div>
             </div>
           </div>
+          <TransactionForm symbol={this.props.match.params.assetSymbol} user={this.props.user} assets={this.props.assets} createTransaction={this.props.createTransaction} currentPrice={currentPrice} quantityOwned={quantityOwned} sign={sign} errors={this.props.errors} createWatchlistAsset={this.props.createWatchlistAsset}/>
         </div>
       </div>
     )

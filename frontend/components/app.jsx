@@ -7,6 +7,8 @@ import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import PortfolioContainer from './portfolio/portfolio_container';
 import AssetShowContainter from './asset/asset_show_container';
+import WatchlistShowContainer from './watchlist/watchlist_show_container';
+
 
 
 const App = () => (
@@ -17,6 +19,7 @@ const App = () => (
     <AuthRoute exact path="/login" component={LoginContainer} />
     <ProtectedRoute exact path="/portfolio" component={PortfolioContainer} />
     <ProtectedRoute exact path='/assets/:assetSymbol' component={AssetShowContainter} />
+    <ProtectedRoute path='/watchlist/:watchlistId' component={WatchlistShowContainer} />
     </Switch>
   </div>
 );

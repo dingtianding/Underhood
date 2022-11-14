@@ -26,7 +26,7 @@ export default class AddFundsForm extends React.Component {
 
     this.props.addFunds(this.props.user.id, numValue)
       .then(() => {
-        this.props.fetchTransactions(this.props.user.id)
+        // this.props.fetchTransactions(this.props.user.id)
         document.querySelector('.funds-modal').classList.toggle('hidden')
       }, 
       (error) => {
@@ -48,7 +48,7 @@ export default class AddFundsForm extends React.Component {
           <form onSubmit={this.handleSubmit} className='deposit-form'>
             <p>Deposit Funds</p>
             <label>From</label>
-              <input type="text" value='A BANK' disabled/>
+              <input type="text" value='JPMorgan Chase' disabled/>
             <label htmlFor='add-amount'> Amount</label>
               <input type="text" value={this.state.amount} placeholder='$0.00' onChange={this.handleChange} id='add-amount' required/>
             <button className='review-button'>Confirm</button>

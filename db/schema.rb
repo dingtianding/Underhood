@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2022_11_03_232827) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "asset_transactions", force: :cascade do |t|
+  create_table "portfolio_transactions", force: :cascade do |t|
     t.string "symbol", null: false
     t.integer "owner_id"
     t.boolean "is_purchase"
@@ -24,8 +24,7 @@ ActiveRecord::Schema.define(version: 2022_11_03_232827) do
     t.float "current_total", default: 0.0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["owner_id"], name: "index_asset_transactions_on_owner_id"
-    t.index ["symbol"], name: "index_asset_transactions_on_symbol"
+    t.index ["owner_id"], name: "index_portfolio_transactions_on_owner_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,6 +52,7 @@ ActiveRecord::Schema.define(version: 2022_11_03_232827) do
   create_table "watchlists", force: :cascade do |t|
     t.integer "user_id"
     t.string "name"
+    t.string "icon", default: "&#128161;", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_watchlists_on_name"

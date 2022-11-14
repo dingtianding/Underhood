@@ -1,4 +1,4 @@
-import { postUser, deleteSession, postSession } from '../util/session_util';
+import * as SessionApiUtil from '../util/session_util';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
@@ -24,19 +24,24 @@ export const clearErrors = ()=>({
   type: CLEAR_ERRORS
 })
 
-export const signup = user => dispatch => postUser(user)
+export const signup = user => dispatch => SessionApiUtil.postUser(user)
   .then(user => (dispatch(receiveCurrentUser(user))),
   err => dispatch(receiveErrors(err.responseJSON)
 
   ));
 
 export const login = user => dispatch => (
-  postSession(user).then(user => (
+  SessionApiUtil.postSession(user).then(user => (
       dispatch(receiveCurrentUser(user)))
       , err => dispatch(receiveErrors(err.responseJSON))
     )
 );
 
-export const logout = () => dispatch => deleteSession()
+export const logout = () => dispatch => SessionApiUtil.deleteSession()
   .then(() => dispatch(logoutCurrentUser()));
 
+export const addFunds = (userId, amount) => dispatch => {
+  return SessionApiUtil.addFunds(userId, amount)
+    .then(user => dispatch(receiveCurrentUser(user)))
+    .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
+}  

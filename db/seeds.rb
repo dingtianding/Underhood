@@ -13,3 +13,20 @@ demo_account = User.create(
     password: '123456', 
     buying_power: 69420.88
 )
+
+transaction1 = PortfolioTransaction.create(
+    owner_id: demo_account.id, 
+    is_purchase: true, 
+    quantity: 90, 
+    transaction_price: 20.15, 
+    symbol: 'AMC', 
+    current_total: 2999.24, 
+    created_at: 365.days.ago)
+
+watchlist1 = Watchlist.create(
+    user_id: demo_account.id, 
+    name: 'Stock Watchlist');
+
+watched1 = WatchlistAsset.create(
+    watchlist_id: watchlist1.id, 
+    symbol: 'AMC');

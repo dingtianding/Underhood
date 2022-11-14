@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     
     resources :assets, only: [:show]
     resources :users do
-      resources :asset_transactions, only: [:index]
+      resources :portfolio_transactions, only: [:index]
       resources :watchlists, only: [:index]
     end 
     resources :portfolio_transactions, only: [:create]
