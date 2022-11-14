@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LoadingSpinner from '../loading';
-import MiniWatchlistItem from './mini_watchlist_item';
+import MiniWatchlistItem from '../portfolio/list/watchlist_item';
 import NewWatchlistFormContainer from './new_watchlist_form_container';
+import NavBar from '.././navbar/navbar_container'
+
 
 export default class WatchlistShow extends React.Component {
   constructor(props) {
@@ -77,9 +79,6 @@ export default class WatchlistShow extends React.Component {
       })
   }
 
-    // if (!this.props.assets.full || !this.props.assets.full[asset.symbol] || !this.props.assets.details || !this.props.assets.details[asset.symbol]) {
-  // }
-
   componentDidUpdate(prevProps) {
     $(`#watchlist-icon-${this.state.id}`).html(this.state.icon);
     if (prevProps.match.params.watchlistId !== this.props.match.params.watchlistId) {
@@ -139,7 +138,6 @@ export default class WatchlistShow extends React.Component {
   sortTable(column) {
     return (e) => {
       let isReversed;
-      // const jqueryId = `#${column}`;
       $(`.sort-caret`).html('');
       if ($(`#${column}`).hasClass('sort')) {
         $(`#${column}`).removeClass('sort');
@@ -263,6 +261,10 @@ export default class WatchlistShow extends React.Component {
     return (
 
       <div className='watchlist-show'>
+        <div className="portfolio_nav_bar">
+            <NavBar/>
+        </div>
+        
         {this.renderConfirmDelete()}
         <div className='watchlist-body'>
           <div className='watchlist-main'>
@@ -276,8 +278,6 @@ export default class WatchlistShow extends React.Component {
               </div>
 
               <div className='watchlist-sort-options'>
-                {/* <span><i className="fas fa-filter filter-icon"></i></span>  */}
-                {/* <span onClick={this.toggleConfirmDelete(this.state.id)} ><i className="fas fa-ellipsis-h filter-icon"></i></span> */}
                 <span onClick={this.toggleConfirmDelete(this.state.id)} className='watchlist-delete-list'>&times;</span>
               </div>
             </div>

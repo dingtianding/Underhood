@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import NavBar from '.././navbar/navbar_container'
-import NewsFeed from './newsfeed'
+import NewsFeed from './news/newsfeed'
 import LineGraph from './chart/line_graph'
 import TimeLine from './chart/timeline'
 import AddFundsForm from './form/add_funds_form';
 
 import AssetListItem from './list/asset_list_item';
-import MiniWatchlistItem from '../watchlist/mini_watchlist_item';
+import MiniWatchlistItem from './list/watchlist_item';
 
 
 import { formatDollarString } from '../../util/format_util'

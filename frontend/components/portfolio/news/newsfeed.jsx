@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { fetchAllMarketNews } from "../../util/news_api_util";
+import { fetchAllMarketNews } from "../../../util/news_api_util";
 
-import CompanyNews from "./news/news";
-import PopularList from "./news/popular_list";
+import CompanyNews from "./news";
+import PopularList from "./popular_list";
 
 
 

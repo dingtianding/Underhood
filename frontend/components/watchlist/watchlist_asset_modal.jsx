@@ -1,5 +1,5 @@
 import React from 'react';
-import MiniWatchlistItem from './mini_watchlist_item'
+import MiniWatchlistItem from '../portfolio/list/watchlist_item'
 import NewWatchlistFormContainer from './new_watchlist_form_container';
 export default class WatchlistAssetModal extends React.Component {
   constructor(props) {

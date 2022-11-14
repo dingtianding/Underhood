@@ -176,7 +176,7 @@ export default class TransactionForm extends React.Component {
     if (this.state.is_purchase) {
       available = `${buyingPower} buying power available`;
     } else if (this.state.transaction_unit === 'shares') {
-      available = `${this.props.quantityOwned.toFixed(6)} Shares Available`;
+      available = `${this.props.quantityOwned.toFixed(2)} Shares Available`;
     } else if (this.state.transaction_unit === 'dollars') {
       available = `${this.state.valueOwned} Available`;
     }

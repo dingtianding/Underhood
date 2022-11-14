@@ -180,16 +180,28 @@
     display: flex;
     margin: 5px 0;
     cursor: pointer;
+    height: 69px;
+
 }
 .mini-watchlist-item div {
-    padding-left: 10px;
+    padding-left: 0px;
+}
+
+.mini-watchlist-name {
+    
+    justify-content: space-between;
+    color: white;
 }
 
 .mini-watchlist-itemLength {
     line-height: 2;
     color: #919FA6;
     font-size: 13px;
+    justify-content: space-between;
+    margin-left: 4px;
+    margin-right: 4px;
 }
+
 
 .mini-item-details {
     display: flex;
@@ -207,6 +219,3 @@
     margin-left: 10px;
 }
 
-.mini-watchlist-name {
-    color: white;
-}
