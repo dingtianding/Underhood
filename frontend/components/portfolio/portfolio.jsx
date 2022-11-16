@@ -44,22 +44,21 @@ class Portfolio extends React.Component{
               })
           })
       }
-
-
-    clickBuyPower(e) {
-        const buyPowerDiv = document.querySelector('.buying-power-div');
-        const button = document.getElementById('bp-button');
-        const deposit = document.getElementById('add-funds');
-    
-    
-        buyPowerDiv.classList.toggle('gray-background');
-        button.classList.toggle('hidden');
-        deposit.classList.toggle('hidden');
-      };
       
-    clickDeposit(e) {
+    clickBP(e) {
         e.preventDefault();
         document.querySelector('.funds-modal').classList.toggle('hidden');
+
+        const modal = document.querySelector('.funds-modal')
+        const body = document.querySelector("body");
+        
+        if (!modal.classList.contains("hidden")) {
+            // Disable scroll
+            body.style.overflow = "hidden";
+        } else {
+            // Enable scroll
+            body.style.overflow = "auto";
+        }
     }
     
 
@@ -82,7 +81,7 @@ class Portfolio extends React.Component{
                                 <div className="left_chart_header">
                                     <h1 className="port_value">$1,363,440.63</h1>
                                     <p className="port_change">+ 363,440.63 (+36.34%)</p>
-                                    <p className="port_timeline">Past Year</p>
+                                    <p className="port_timeline">Past Year (Sandbox Data)</p>
                                 </div>
 
                                 <div className="left_chart">
@@ -92,8 +91,9 @@ class Portfolio extends React.Component{
 
                                 <div className="left_buyingpower">
                                     <div className='buying-power-div' >
-                                        <div className='buying-power flex-between' id='bp-button' onClick={this.clickDeposit}>
+                                        <div className='buying-power flex-between' id='bp-button' onClick={this.clickBP}>
                                             <div>Buying Power</div>
+                                            <div className="buying-power-click"> Click here to add funds</div>
                                             <div>{formatDollarString(parseFloat(this.props.user.buying_power))}</div>
                                         </div>
                                     </div>
@@ -103,7 +103,11 @@ class Portfolio extends React.Component{
                                     <div className="left_notices_box">
                                         <p> New Free Stock Program!</p>
                                         <h1> Refer a friend. Pick fractional shares of stocks like Meta, GameStop, or AMC! Limitations apply. </h1>
-                                        <button> <span id="a">Invite friends</span><span id="b">No friends avaliable :(</span></button>
+                                        <a href="https://robinhood.com/us/en/support/articles/invite-friends-pick-stock/">
+                                            <button> <span id="a">Invite friends</span>
+                                            <span id="b">No friends avaliable :(</span>
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
                                 <NewsFeed />
@@ -115,7 +119,7 @@ class Portfolio extends React.Component{
                 <aside className='lists-container'>
                 
                 <div className='lists-header'>
-                    <p>Stocks</p>
+                    <p>Portfolio</p>
                 </div>
 
                         {
@@ -127,9 +131,12 @@ class Portfolio extends React.Component{
                     <p>Watchlists</p>
                 </div>                        {
                         this.state.watchlistValues.map((watchlist) =>
-                            <Link to={`/watchlist/${watchlist.id}`} key={watchlist.id}>
+                        <Link to={`/watchlist/${watchlist.id}`} key={watchlist.id}>
+                            <div className='watchlist-row'>
                                 <MiniWatchlistItem watchlist={watchlist}  />
-                            </Link>
+                            </div>
+                        </Link>
+
                         )
                         }
                 </aside>         

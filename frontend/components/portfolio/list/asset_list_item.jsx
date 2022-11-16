@@ -10,6 +10,9 @@ export default class AssetListItem extends React.Component {
 
   render() {
     if (!this.props.assets || !this.props.symbol || !this.props.assets[this.props.symbol]) return null;
+
+    if (this.props.quantity === 0) return (<div></div>)
+
     const quote = Object.values(this.props.assets[this.props.symbol]);
 
     const closePrice = parseFloat(quote[0]["4. close"]);
@@ -19,22 +22,22 @@ export default class AssetListItem extends React.Component {
     const colorClass = percentDiff < 0 ? 'negative' : 'positive';
     const sign = percentDiff < 0 ? '' : '+';
 
-    return (
-      <Link to={`/assets/${this.props.symbol}`}>
-        <div className='asset-sidebar row'>
-          <div className='column asset-sidebar-item'>
-            <h1 className='list-symbol'>{this.props.symbol}</h1>
-            <div>{this.props.quantity.toFixed(0)} Shares</div>
+      return (
+        <Link to={`/assets/${this.props.symbol}`}>
+          <div className='asset-sidebar row'>
+            <div className='column asset-sidebar-item'>
+              <h1 className='list-symbol'>{this.props.symbol}</h1>
+              <div>{this.props.quantity.toFixed(0)} Shares</div>
+            </div>
+            <div className='list-chart-container'>
+              <MiniChart symbol={this.props.symbol} dailyValues={this.props.assets[this.props.symbol]} colorClass={colorClass}/>
+            </div>
+            <div className='column asset-sidebar-item'>
+              <div className='list-price'>{formatDollarString(closePrice)}</div>
+              <div className={colorClass}>{`${sign}${percentDiff.toFixed(2)}%`}</div>
+            </div>
           </div>
-          <div className='list-chart-container'>
-            <MiniChart symbol={this.props.symbol} dailyValues={this.props.assets[this.props.symbol]} colorClass={colorClass}/>
-          </div>
-          <div className='column asset-sidebar-item'>
-            <div className='list-price'>{formatDollarString(closePrice)}</div>
-            <div className={colorClass}>{`${sign}${percentDiff.toFixed(2)}%`}</div>
-          </div>
-        </div>
-      </Link>
-    )
+        </Link>
+      )
   }
 }

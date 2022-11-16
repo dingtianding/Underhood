@@ -10,21 +10,21 @@
 }
 
 .splash-disclaimer-modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 20%;
-  height: 23%;
+  display: block;
+  width: 50%;
+  height: 30%;
   color: rgb(78, 74, 74);
   font-size: 20px;
-  padding: 10%;
+  padding: 3%;
   border-radius: 5px;
   border: 10px solid #2e302e;
   background-color: white;
-
+  overflow-y: initial
 }
-
+.splash-disclaimer-modal-text {
+  height:350px;
+  overflow-y: auto;
+}
 .disclaimer {
   font-size: 30px;
   color: rgb(78, 74, 74);
@@ -35,3 +35,4 @@
 .underline {
   text-decoration: underline;
 }
+

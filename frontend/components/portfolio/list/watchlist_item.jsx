@@ -17,7 +17,7 @@ export default class MiniWatchlistItem extends React.Component {
     const itemLength = assetLength === 1 ? `${assetLength} item` : `${assetLength} items`;
     const icon = 128161
     return (
-      <div className='mini-watchlist-item row'>
+      <div className='mini-watchlist-item'>
         {/* <div className='mini-icon' id={`mini-icon-${this.props.watchlist.id}`}></div> */}
         <div className='mini-item-details'>
           <div className='mini-watchlist-name column'>{this.props.watchlist.name}</div>

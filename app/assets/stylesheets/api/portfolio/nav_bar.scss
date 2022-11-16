@@ -74,7 +74,8 @@
     margin-top: 3px;
     transform: translate(0px,-2px);
     z-index: 101;
-
+    margin-top: -4px;
+    box-sizing: border-box;
   }
   
 .search-result {
@@ -87,8 +88,8 @@
   }
   
 .search-result:hover {
-    background-color: #4c545c;
-    z-index: 100;
+  background-color: #31363A;
+  z-index: 100;
   }
   
 .search-result-symbol {
@@ -108,7 +109,7 @@
   }
 .portfolio-nav-links {
     color: white;
-    padding: 0 20px;
+    padding: 0 10px;
     font-size: 15px;
     cursor: pointer;
     text-decoration: none;
@@ -128,7 +129,7 @@ button.portfolio-nav-links {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 5% 0 5%;
+    padding: 20px 1% 0 1%;
     z-index: 100;
   }
   
@@ -148,4 +149,16 @@ button.portfolio-nav-links {
 
 .hidden {
   display: none;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  outline: none;
+}
+
+input:focus-visible {
+  outline-offset: 0px;
+}
+
+input[type="text" i] {
+  padding: 1px 2px;
 }

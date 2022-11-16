@@ -97,11 +97,12 @@ export default class NavBar extends React.Component {
         </div>
 
         <div className='portfolio-nav-links'>
-          <a href="https://deanding.com" className='portfolio-nav-links' target="_blank">Portfolio <i className="fab fa-weixin"></i></a>
+          <Link style={{textDecoration: 'none'}} to="/portfolio"> <a className='portfolio-nav-links'>Portfolio</a> </Link>
           <a href="https://angel.co/u/ding-tian-ding" className='portfolio-nav-links' target="_blank">AngelList <i className="fab fa-angellist"></i></a>
           <a href="https://www.linkedin.com/in/deanding/" className='portfolio-nav-links' target="_blank">LinkedIn <i className="fab fa-linkedin"></i></a>
           <a href="https://github.com/dingtianding" className='portfolio-nav-links' target="_blank">GitHub <i className="fab fa-github"></i></a>
-          <button onClick={this.props.logout} className='portfolio-nav-links'>Logout<i className="fab fa-angellist"></i></button>
+          <a href="https://deanding.me" className='portfolio-nav-links' target="_blank">Contact <i className="fab fa-weixin"></i></a>
+          <button onClick={this.props.logout} className='portfolio-nav-links'>Logout</button>
         </div>
       </nav>
     )

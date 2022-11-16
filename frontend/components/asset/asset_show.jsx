@@ -76,8 +76,8 @@ export default class AssetShow extends React.Component {
               <div className='about-body'>{details['Description']}</div>
             </div>
 
-            <div className='left-news'>
-              <div className='left-news_box'>
+            <div className='left_news'>
+              <div className='left_news_box'>
                 <h1>News</h1>
               </div>
               <div >

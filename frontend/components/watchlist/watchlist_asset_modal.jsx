@@ -94,6 +94,8 @@ export default class WatchlistAssetModal extends React.Component {
         this.componentDidMount();
       })
     
+      this.toggleModal();
+
   }
 
   renderMiniWatchlist() {

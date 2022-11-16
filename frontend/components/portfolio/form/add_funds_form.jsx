@@ -32,12 +32,16 @@ export default class AddFundsForm extends React.Component {
       (error) => {
       $('#add-amount').append(`<div>{error.responseJSON.map(err => <div>err</div>)}</div>`)
     });
-    ;
-  }
+    
+    const body = document.querySelector("body");
+    body.style.overflow = "auto";  }
 
   clickClose (e){
     e.preventDefault();
     document.querySelector('.funds-modal').classList.toggle('hidden');
+
+    const body = document.querySelector("body");
+    body.style.overflow = "auto";
   }
 
   render() {

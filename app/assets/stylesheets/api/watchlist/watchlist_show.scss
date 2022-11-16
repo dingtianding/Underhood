@@ -3,7 +3,8 @@
   height: 100%;
   background-color: black;
   color: white;
-  font-size: 13px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .watchlist-body{
@@ -23,7 +24,7 @@
 }
 
 .watchlist-aside {
-  border: 1px solid grey;
+  border: 1px solid #42494B;
   min-width: 275px;
   height: 600px;
   margin: 40px 50px;
@@ -38,11 +39,11 @@
 }
 
 .watchlist-aside-title {
-  font-size: 15px;
+  font-size: 16px;
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #42494B;
 }
 
 .watchlist-sort-options {
@@ -256,6 +257,13 @@ th:hover, .filter-icon:hover, .watchlist-delete-list:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 0px;
+}
+.watchlist-side-bar-item:hover{
+  background-color: rgb(64,73,78);
 }
 
 .watchlist-side-bar-item .watchlist-side-bar-item {

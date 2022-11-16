@@ -1,5 +1,7 @@
 .splash{
     height: 100%;
+    width: 100%;
+
 }
 .splash-header{
     display: flex;
@@ -55,9 +57,9 @@ button:hover{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 90px;
-    padding-bottom: 30px;
-    background-color:rgb(195, 246, 72);
+    padding-top: 4%;
+    padding-bottom: 4%;
+    background-color: #c3f648;
     width: 100%;
     font-family: avenir;
 }
@@ -96,7 +98,7 @@ button:hover{
 
 .second-splash-component{
     background-color: white;
-    padding: 3%;
+    padding: 2%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -127,7 +129,7 @@ button:hover{
     align-items: center;
     background-color: black;
     color: white;
-    padding: 2%;
+    padding: 1%;
 }
 
 

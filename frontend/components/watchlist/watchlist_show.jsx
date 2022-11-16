@@ -320,7 +320,7 @@ export default class WatchlistShow extends React.Component {
             {emptyTable}
           </div>
           <aside className='watchlist-aside'>
-            <div className='watchlist-aside-title'><span>Lists</span><span onClick={this.toggleNewListInput} className='toggle-show-new-form'>+</span></div>
+            <div className='watchlist-aside-title'><span>Your Watchlists</span><span onClick={this.toggleNewListInput} className='toggle-show-new-form'>+</span></div>
             <div className='all-list-names'>
               <NewWatchlistFormContainer color='greenText' toggleNewListInput={this.toggleNewListInput} />
               {
