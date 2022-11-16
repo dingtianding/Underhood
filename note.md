@@ -3,6 +3,7 @@
 <!-- watchlist item row is small -->
 <!-- make disclaimer a scroller -->
 <!-- fix search bar -->
+readme
 portfolio chart
 
 make sure graph load properly
@@ -12,12 +13,10 @@ think about api request limit
 <!-- Make demo login more visible -->
 <!-- consider border radius to make it seem more native -->
 <!-- more padding for graph and divider -->
-readme
 
 <!-- persona link more differentiate -->
-more padding gray and white txt in news
+<!-- more padding gray and white txt in news -->
 <!-- deanding.me -->
-
-maybe make personal site mobile friendly
+<!-- maybe make personal site mobile friendly -->
 
 

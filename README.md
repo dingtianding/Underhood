@@ -16,26 +16,35 @@ Underhood is a clone of a website version of a popular stock exchange app called
      * PostgreSQL
      * HTML/CSS
    * APIs: 
-     * Chart.js / Canvas
+     * Chart.js
      * Finnhub(News)
      * AlphaVantage(Search & Live Price)
+   * Other: 
+     * Amazon AWS S3
+     * Heoku
    
 ## Features
-  * User signup and login as well as demo user function
+  * User signup and login as well as a demo user function
+    * ![login](https://aa-underhood.s3.us-east-2.amazonaws.com/Login.mov)
   * Portfolio chart performance over time with sidebar of all owned stocks
-  * Price chart displaying real time stock prices from a Stock API
+    * ![portfolio](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+  * Buying power that limits user from stock purchase and ability to add to that balance.
+    * ![buyingpower](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
   * News section displaying latest current event from a New API
-  * Search bar displaying asset search result and navigate to specifc Asset page
-  * Asset page displaying real time price chart and latest current event of the specific asset
- 
+    * ![news](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+  * Stock page displaying real time price chart and latest current event of the specific asset
+    * ![stock](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+  * Purchase and sell stock in shares or dollars based on live price
+    * ![login](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+  * Create multiple watchlist and add stocks to those watchlists
+    * ![watchlist](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+  * Search bar displaying stock search result and navigate to specifc Stock page
+    * ![search](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
  ## Upcoming Features
-   * Add stocks to watchlists
-   * Purchase and sell stock in shares or dollars based on live price
-   * Stock simulatior game with leaderboard of all the users
+  * Leaderboard of all the users (Stock simulatior game)
 
 ## Code snippets
 
-* ![sidebar](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
 * ![graph](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/graph.png)
 ```javascript
 useEffect(() => {
