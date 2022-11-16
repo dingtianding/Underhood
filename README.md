@@ -25,7 +25,7 @@ Underhood is a clone of a website version of a popular stock exchange app called
    
 ## Features
   * User signup and login as well as a demo user function
-    <!-- * ![login](https://deandingprojects.s3.us-east-2.amazonaws.com/Login.mov) -->
+    * ![login](https://gfycat.com/seriousgivingelephant)
   * Portoflio chart performance over time with sidebar of all owned stocks
     <!-- * ![portfolio](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true) -->
   * Buying power that limits user from stock purchase and ability to add to that balance.
