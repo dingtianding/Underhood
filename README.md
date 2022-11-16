@@ -21,25 +21,25 @@ Underhood is a clone of a website version of a popular stock exchange app called
      * AlphaVantage(Search & Live Price)
    * Other: 
      * Amazon AWS S3
-     * Heoku
+     * Heroku
    
 ## Features
   * User signup and login as well as a demo user function
-    * ![login](https://aa-underhood.s3.us-east-2.amazonaws.com/Login.mov)
+    * ![login](https://deandingprojects.s3.us-east-2.amazonaws.com/Login.mov)
   * Portfolio chart performance over time with sidebar of all owned stocks
-    * ![portfolio](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+    <!-- * ![portfolio](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true) -->
   * Buying power that limits user from stock purchase and ability to add to that balance.
-    * ![buyingpower](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+    <!-- * ![buyingpower](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true) -->
   * News section displaying latest current event from a New API
-    * ![news](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+    <!-- * ![news](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true) -->
   * Stock page displaying real time price chart and latest current event of the specific asset
-    * ![stock](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+    <!-- * ![stock](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true) -->
   * Purchase and sell stock in shares or dollars based on live price
-    * ![login](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+    <!-- * ![login](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true) -->
   * Create multiple watchlist and add stocks to those watchlists
-    * ![watchlist](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+    <!-- * ![watchlist](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true) -->
   * Search bar displaying stock search result and navigate to specifc Stock page
-    * ![search](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true)
+    <!-- * ![search](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true) -->
  ## Upcoming Features
   * Leaderboard of all the users (Stock simulatior game)
 
