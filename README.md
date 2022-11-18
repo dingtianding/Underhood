@@ -43,7 +43,6 @@ Underhood is a clone of a website version of a popular stock exchange app called
     * ![watchlist](https://user-images.githubusercontent.com/82133627/152613031-2c5d90fe-4068-4c62-8563-2b1557c1f5a4.gif)
   * Search bar with stock symbols and names from API
     * ![search](https://user-images.githubusercontent.com/83096156/202592199-8f2ba24d-b272-4dae-ac8c-4bc0dc548683.gif)
- 
 
  ## Future Features
   * A leaderboard of all the users's net worth and rules for a stock simulatior game
@@ -51,49 +50,33 @@ Underhood is a clone of a website version of a popular stock exchange app called
 
 ## Code snippets
 
-* ![graph](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/graph.png)
+* Originaly each change to the search bar would fire off an API call. With the limit of 5 API calls per minute, this limit was quickly exceed. A debounce function was added to reduce API pulls. With the debounce function, the call to the API only occurs if the user stops typing for 1 second.
 ```javascript
-useEffect(() => {
-    
-    let data = [];
-    let value = 1000000;
-    for(var i = 0; i < 366; i++){
-      let date = new Date();
-      date.setHours(0,0,0,0);
-      date.setDate(i-355);
-      value += Math.round((Math.random() < 0.2 ? 1 : 0) * Math.random() * 10000);
-      data.push({x: date, y: value});
-    }   
-    setData(data)
-  }, []);
+  debounceSearch() {
+    let timer;
+    return (keyword) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        Promise.all([this.props.fetchSearch(keyword)])
+          .then(() => {
+            this.setState({ results: this.props.results[keyword] || [] })
+          })
+      }, 1000);
+    }
+  }
 
-  return (
-    <div className="linegraph">
-      {data?.length > 0 && (
-        <Line
-          data={{
-            datasets: [
-              {
-                type: 'line',
-                backgroundColor: "black",
-                borderColor: "#5AC53B",
-                borderWidth: 2,
-                pointBorderColor: 'rgba(0, 0, 0, 0)',
-                pointBackgroundColor: 'rgba(0, 0, 0, 0)',
-                pointHoverBackgroundColor: '#5AC53B',
-                pointHoverBorderColor: '#000000',
-                pointHoverBorderWidth: 4,
-                pointHoverRadius: 6,
-                data: data,
-              },
-            ],
-          }}
-          options={options}
-        />
-      )}
-    </div>
-  );
+  handleSearch(e) {
+    const keyword = e.currentTarget.value;
+    if (!keyword) {
+      this.setState({ keyword: '', results: '' });
+    } else {
+      this.setState({ keyword: keyword }, 
+        this.debounceSearch(keyword)
+        )
+    }
+  }
   ```
+  
 * ![news](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/news.png?raw=true)
 ```javascript
 const CompanyNews = ({ companyNews }) => {
