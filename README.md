@@ -22,13 +22,14 @@ Underhood is a clone of a website version of a popular stock exchange app called
    * Other: 
      * Amazon AWS S3
      * Heroku
+     * Material UI
    
 ## Features
   * User signup and login as well as a demo user function
   ![Login_DemoUser](https://user-images.githubusercontent.com/83096156/202593002-36fd3126-6af3-4015-90c9-e09bcb811e66.gif)
   * Portoflio page with sidebar of all owned stocks and watchlists
   ![Portfolio](https://user-images.githubusercontent.com/83096156/202591698-ba5e4c24-6181-4f77-9f52-3e945b29403d.gif)
-  * Buying power that limits user from stock purchase and ability to add to that balance.
+  * Buying power that limits user from stock purchase and the ability to add to that balance.
   ![Buying Power](https://user-images.githubusercontent.com/83096156/202591750-9240f395-1315-4b69-9982-38aa2458e30b.gif)
   * News section displaying latest current event from a New API
   ![News](https://user-images.githubusercontent.com/83096156/202591776-6ca9225f-6985-4824-8dd5-d53b82930417.gif)
@@ -42,8 +43,10 @@ Underhood is a clone of a website version of a popular stock exchange app called
   ![search](https://user-images.githubusercontent.com/82133627/152612673-4db83667-310b-466b-b70f-4324ddb3b591.gif)
 
  ## Future Features
+  * Portfolio Chart on portolio page
+  * More details on the stock pages(Market Value, Cost, Stats on the stock(market cap, 52 day high/low etc))
   * A leaderboard of all the users's net worth and rules for a stock simulatior game
-
+  * Responsiveness on mobile clients
 
 ## Code snippets
 
