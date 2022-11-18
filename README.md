@@ -28,7 +28,7 @@ Underhood is a clone of a website version of a popular stock exchange app called
   * User signup and login as well as a demo user function
   ![Login_DemoUser](https://user-images.githubusercontent.com/83096156/202593002-36fd3126-6af3-4015-90c9-e09bcb811e66.gif)
   * Portoflio page with sidebar of all owned stocks and watchlists
-    *Note: The portfolio chart currently utilizes hardcoded sandbox datas. This is a design choice as the official Robinhood portfolio chart is based on the histoical market values of the owned shares. In order to recreate a similar chart, we would have to fire API calls each time we navigate to the portfolio page to acquire those datas, and this would deplete the API call limit within a new click and return*.
+    *Note: The portfolio chart currently utilizes hardcoded sandbox datas. This is a design choice as the official Robinhood portfolio chart is based on the histoical market prices of the owned shares. In order to recreate a similar chart, we would have to fire API calls each time we navigate to the portfolio page to acquire those datas, and this would deplete the API call limit within a new click and return*.
   ![Portfolio](https://user-images.githubusercontent.com/83096156/202591698-ba5e4c24-6181-4f77-9f52-3e945b29403d.gif)
   * Buying power that limits user from stock purchase and the ability to add to that balance.
   ![Buying Power](https://user-images.githubusercontent.com/83096156/202591750-9240f395-1315-4b69-9982-38aa2458e30b.gif)
@@ -45,8 +45,8 @@ Underhood is a clone of a website version of a popular stock exchange app called
 
  ## Future Features/Ideas
   * A Portfolio Chart of all owned assets based on their historical shares and price flunctuations, can also be option for different time periods.
+      * Having multiple API keys that rotates the key being used based on a API call counter, and bypassing the 5 call per min limitation.
   * Stock/company details on the stock pages(Market Value, Cost, Stats on the stock(market cap, 52 day high/low etc)
-  * Having multiple API keys that rotates the key being used based on a API call counter, and bypassing the 5 call per min limitation.
   * A leaderboard of all the users's net worth and rules for a stock simulatior game
 
 ## Code snippets
