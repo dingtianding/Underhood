@@ -25,8 +25,11 @@ Underhood is a clone of a website version of a popular stock exchange app called
    
 ## Features
   * User signup and login as well as a demo user function
-    * ![login](https://deandingprojects.s3.us-east-2.amazonaws.com/Login.gif)
-  * Portoflio chart performance over time with sidebar of all owned stocks
+    * ![Login](https://user-images.githubusercontent.com/83096156/202591294-a4081074-75a2-4b97-8625-5911d8df0a67.gif)
+    * ![Demo User](https://user-images.githubusercontent.com/83096156/202591397-beefd5bd-1023-4ab2-b8c1-3f48195d2e76.gif)
+
+
+  * Portoflio page with sidebar of all owned stocks and watchlists
     <!-- * ![portfolio](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true) -->
   * Buying power that limits user from stock purchase and ability to add to that balance.
     <!-- * ![buyingpower](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true) -->
@@ -41,8 +44,9 @@ Underhood is a clone of a website version of a popular stock exchange app called
   * Search bar with stock symbols and names from API
     * ![search](https://user-images.githubusercontent.com/82133627/152612673-4db83667-310b-466b-b70f-4324ddb3b591.gif)  
 
- ## Upcoming Features
-  * Leaderboard of all the users (Stock simulatior game)
+ ## Future Features
+  * A leaderboard of all the users's net worth and rules for a stock simulatior game
+
 
 ## Code snippets
 
