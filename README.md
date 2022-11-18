@@ -38,7 +38,7 @@ Underhood is a clone of a website version of a popular stock exchange app called
   * Purchase and sell stock in shares or dollars based on live price
   ![transaction](https://user-images.githubusercontent.com/83096156/202591764-40de8c06-1c56-459b-9c37-6a8cbfc2851e.gif)
   * Create multiple watchlist and add stocks to those watchlists
-  ![watchlist](https://user-images.githubusercontent.com/82133627/152613031-2c5d90fe-4068-4c62-8563-2b1557c1f5a4.gif)
+  ![watchlist](https://user-images.githubusercontent.com/83096156/202598953-b5a72ea5-dc13-49f2-8b54-422f4c2cb21a.gif)
   * Search bar with stock symbols and names from API
   ![search](https://user-images.githubusercontent.com/82133627/152612673-4db83667-310b-466b-b70f-4324ddb3b591.gif)
 
