@@ -42,15 +42,16 @@ Underhood is a clone of a website version of a popular stock exchange app called
   * Search bar with stock symbols and names from API
   ![search](https://user-images.githubusercontent.com/82133627/152612673-4db83667-310b-466b-b70f-4324ddb3b591.gif)
 
- ## Future Features
+ ## Future Features/Ideas
   * Portfolio Chart on portolio page
   * More details on the stock pages(Market Value, Cost, Stats on the stock(market cap, 52 day high/low etc))
-  * A leaderboard of all the users's net worth and rules for a stock simulatior game
   * Responsiveness on mobile clients
+  * Having multiple API keys that rotates the key being used based on a API call counter, and bypassing the 5 call per min limitation.
+  * A leaderboard of all the users's net worth and rules for a stock simulatior game
 
 ## Code snippets
 
-* Originaly each change to the search bar would fire off an API call. With the limit of 5 API calls per minute, this limit was quickly exceed. A debounce function was added to reduce API pulls. With the debounce function, the call to the API only occurs if the user stops typing for 1 second.
+* By default each change to the search bar would fire off an API call, and with the AlphaVantage limit of 5 API calls per minute, this limit was quickly exceed. A debounce function was added to reduce API pulls. With the debounce function, the call to the API only occurs if the user stops typing for 1 second.
 ```javascript
   debounceSearch() {
     let timer;
@@ -76,8 +77,8 @@ Underhood is a clone of a website version of a popular stock exchange app called
     }
   }
   ```
-
-* ![news](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/news.png?raw=true)
+* With limits on the free version of the stocks API. A second Stock API FinnHub is utilized for fetching company news. For the same stock symbol used for stock price fetch, it is used in second API call to fetch that company's news, and the object return is then parsed and styled in workable company news sections and company news items, effectively working around the API limits of using a single stock API.
+![news](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/news.png?raw=true)
 ```javascript
 const CompanyNews = ({ companyNews }) => {
   const news = Object.values(companyNews).map((article, i) => {
