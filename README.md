@@ -30,19 +30,20 @@ Underhood is a clone of a website version of a popular stock exchange app called
 
 
   * Portoflio page with sidebar of all owned stocks and watchlists
-    <!-- * ![portfolio](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true) -->
+    * ![Portfolio](https://user-images.githubusercontent.com/83096156/202591698-ba5e4c24-6181-4f77-9f52-3e945b29403d.gif)
   * Buying power that limits user from stock purchase and ability to add to that balance.
-    <!-- * ![buyingpower](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true) -->
+    * ![Buying Power](https://user-images.githubusercontent.com/83096156/202591750-9240f395-1315-4b69-9982-38aa2458e30b.gif)
   * News section displaying latest current event from a New API
-    <!-- * ![news](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/sidebar.png?raw=true) -->
+    * ![News](https://user-images.githubusercontent.com/83096156/202591776-6ca9225f-6985-4824-8dd5-d53b82930417.gif)
   * Stock page displaying real time price chart and latest current event of the specific asset
-    * ![stock](https://user-images.githubusercontent.com/82133627/152574195-76429be6-d24b-42f6-8a46-813d00c3faeb.gif)
+    * ![stock](https://user-images.githubusercontent.com/83096156/202591769-562a98b1-48c2-4738-8021-dffe1718861d.gif)
   * Purchase and sell stock in shares or dollars based on live price
-    * ![transaction](https://user-images.githubusercontent.com/82133627/152612666-f19694b6-6fdd-48aa-92ae-8472b438c5f2.gif)
+    * ![transaction](https://user-images.githubusercontent.com/83096156/202591764-40de8c06-1c56-459b-9c37-6a8cbfc2851e.gif)
   * Create multiple watchlist and add stocks to those watchlists
     * ![watchlist](https://user-images.githubusercontent.com/82133627/152613031-2c5d90fe-4068-4c62-8563-2b1557c1f5a4.gif)
   * Search bar with stock symbols and names from API
-    * ![search](https://user-images.githubusercontent.com/82133627/152612673-4db83667-310b-466b-b70f-4324ddb3b591.gif)  
+    * ![search](https://user-images.githubusercontent.com/83096156/202592199-8f2ba24d-b272-4dae-ac8c-4bc0dc548683.gif)
+ 
 
  ## Future Features
   * A leaderboard of all the users's net worth and rules for a stock simulatior game
