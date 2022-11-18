@@ -43,8 +43,8 @@ Underhood is a clone of a website version of a popular stock exchange app called
   ![search](https://user-images.githubusercontent.com/82133627/152612673-4db83667-310b-466b-b70f-4324ddb3b591.gif)
 
  ## Future Features/Ideas
-  * Portfolio Chart on portolio page
-  * More details on the stock pages(Market Value, Cost, Stats on the stock(market cap, 52 day high/low etc)
+  * A Portfolio Chart of all owned assets based on their historical shares and price flunctuations, can also be option for different time periods.
+  * Stock/company details on the stock pages(Market Value, Cost, Stats on the stock(market cap, 52 day high/low etc)
   * Having multiple API keys that rotates the key being used based on a API call counter, and bypassing the 5 call per min limitation.
   * A leaderboard of all the users's net worth and rules for a stock simulatior game
 
