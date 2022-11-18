@@ -25,10 +25,7 @@ Underhood is a clone of a website version of a popular stock exchange app called
    
 ## Features
   * User signup and login as well as a demo user function
-    * ![Login](https://user-images.githubusercontent.com/83096156/202591294-a4081074-75a2-4b97-8625-5911d8df0a67.gif)
-    * ![Demo User](https://user-images.githubusercontent.com/83096156/202591397-beefd5bd-1023-4ab2-b8c1-3f48195d2e76.gif)
-
-
+    * ![Login_DemoUser](https://user-images.githubusercontent.com/83096156/202593002-36fd3126-6af3-4015-90c9-e09bcb811e66.gif)
   * Portoflio page with sidebar of all owned stocks and watchlists
     * ![Portfolio](https://user-images.githubusercontent.com/83096156/202591698-ba5e4c24-6181-4f77-9f52-3e945b29403d.gif)
   * Buying power that limits user from stock purchase and ability to add to that balance.
@@ -42,7 +39,7 @@ Underhood is a clone of a website version of a popular stock exchange app called
   * Create multiple watchlist and add stocks to those watchlists
     * ![watchlist](https://user-images.githubusercontent.com/82133627/152613031-2c5d90fe-4068-4c62-8563-2b1557c1f5a4.gif)
   * Search bar with stock symbols and names from API
-    * ![search](https://user-images.githubusercontent.com/83096156/202592199-8f2ba24d-b272-4dae-ac8c-4bc0dc548683.gif)
+    * ![search](https://user-images.githubusercontent.com/82133627/152612673-4db83667-310b-466b-b70f-4324ddb3b591.gif)
 
  ## Future Features
   * A leaderboard of all the users's net worth and rules for a stock simulatior game
@@ -76,7 +73,7 @@ Underhood is a clone of a website version of a popular stock exchange app called
     }
   }
   ```
-  
+
 * ![news](https://github.com/dingtianding/Underhood/blob/main/app/assets/images/news.png?raw=true)
 ```javascript
 const CompanyNews = ({ companyNews }) => {
