@@ -15,7 +15,7 @@ export default class Splash extends React.Component {
 
         return (
             <div className='splash' onClick={this.hideModal}>
-                <div className='splash-disclaimer-modal-container'>
+                {/* <div className='splash-disclaimer-modal-container'>
                     <div className='splash-disclaimer-modal'>
                         <div className='splash-disclaimer-modal-text'>
                             <span className='disclaimer'>Disclaimers * & Notes /</span> <br /><br />
@@ -27,7 +27,7 @@ export default class Splash extends React.Component {
                             / Click anywhere to proceed.
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="splash-bar" >
                     <SplashBarContainer/>
                 </div>
